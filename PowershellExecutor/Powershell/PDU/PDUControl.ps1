@@ -21,7 +21,7 @@ if ($PDUNumber -eq "1")
         {
         $PDUIP = "172.16.1.3"
         }
-if ($PDUNumber -eq "1")
+if ($PDUNumber -eq "2")
         {
         $PDUIP = "172.16.1.4"
         }
