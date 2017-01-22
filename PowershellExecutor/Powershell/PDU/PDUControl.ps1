@@ -1,6 +1,6 @@
 Param (
 [Parameter(ValueFromPipeline=$true)]
-[string]$OutletState ="Enabled",
+[string]$Action ="Enabled",
 [string]$PDUNumber = "",
 [string]$Port = "23",
 [int]$WaitTime = 1000,
@@ -9,11 +9,11 @@ Param (
 )
 
 
-if ($OutletState -eq "Enabled") 
+if ($Action -eq "Enabled") 
         {
         [String[]]$Commands = @("apc","apc","1","2","1","$Outlet","1","1","YES","{ENTER}")
         }
-if ($OutletState -eq "Disabled")
+if ($Action -eq "Disabled")
         {
         [String[]]$Commands = @("apc","apc","1","2","1","$Outlet","1","2","YES","{ENTER}")
         }

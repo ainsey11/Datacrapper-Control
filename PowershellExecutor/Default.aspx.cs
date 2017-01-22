@@ -23,7 +23,7 @@ namespace PowerShellExecution
 
             // Add the script to the PowerShell object
             shell.Commands.AddScript("\\Powershell\\PDU\\PDUControl.ps1");
-            shell.Commands.AddParameter("-PDU", Input_PDUNumber.Text);
+            shell.Commands.AddParameter("-PDUNumber", Input_PDUNumber.Text);
             shell.Commands.AddParameter("-Outlet", Input_PDUOutlet.Text);
             shell.Commands.AddParameter("-Action",Input_PDUAction.Text);
 
