@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Management.Automation;
+using System.Collections.ObjectModel;
 using System.Text;
 
 namespace PowerShellExecution
@@ -18,17 +19,12 @@ namespace PowerShellExecution
 
         protected void ExecuteCode_Click(object sender, EventArgs e)
         {
-            // Initialize PowerShell engine
-            var shell = PowerShell.Create();
-
-            // Add the script to the PowerShell object
-            shell.Commands.AddScript("\\Powershell\\PDU\\PDUControl.ps1");
-            shell.Commands.AddParameter("-PDUNumber", Input_PDUNumber.Text);
-            shell.Commands.AddParameter("-Outlet", Input_PDUOutlet.Text);
-            shell.Commands.AddParameter("-Action",Input_PDUAction.Text);
-
-            // Execute the script
-            var results = shell.Invoke();           
+                var Shell = PowerShell.Create();
+                Shell.AddScript("E:\\Documents\\GitHub\\DataCrapper-Control\\PowershellExecutor\\Powershell\\PDU\\PDUControl.ps1")
+                .AddParameter("PDUNumber", Input_PDUNumber.Text)
+                .AddParameter("PDUOutlet", Input_PDUOutlet.Text)
+                .AddParameter("PDUAction", Input_PDUAction.Text);
+                Shell.Invoke();
         }
     }
 }

@@ -17,7 +17,7 @@
                 <asp:TextBox ID="Input_PDUOutlet" runat="server" TextMode="SingleLine" Width="20px" Height="20px" ></asp:TextBox>
                 <br /> 
                 <h3>Please enter PDU Oulet Action (On/Off)</h3>
-                <asp:TextBox ID="Input_PDUAction" runat="server" TextMode="SingleLine" Width="20px" Height="20px" ></asp:TextBox>
+                <asp:TextBox ID="Input_PDUAction" runat="server" TextMode="SingleLine" Width="50px" Height="20px" ></asp:TextBox>
                 <br />
                 <asp:Button ID="ExecuteCode" runat="server" Text="Action PDU Change" Width="200" onclick="ExecuteCode_Click" />           
     </div>

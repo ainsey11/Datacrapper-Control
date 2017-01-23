@@ -1,34 +1,32 @@
 Param (
 [Parameter(ValueFromPipeline=$true)]
-[string]$Action ="Enabled",
-[string]$PDUNumber = "",
-[string]$Port = "23",
-[int]$WaitTime = 1000,
-[string]$OutputPath = "E:\Desktop\tmp.txt",
-[int] $Outlet = ""
+[string]$PDUAction ="Disabled",
+[int]$PDUNumber = "",
+[int]$PDUOutlet = "",
+[int]$PDUPort = "23",
+[int]$WaitTime = 300,
+[string]$LogPath = "E:\Desktop\tmp.txt"
+
 )
 
-
-if ($Action -eq "Enabled") 
+if ($PDUAction -eq "Enabled")
         {
-        [String[]]$Commands = @("apc","apc","1","2","1","$Outlet","1","1","YES","{ENTER}")
+        [String[]]$Commands = @("apc","apc","1","2","1","$PDUOutlet","1","1","YES","{ENTER}")
         }
-if ($Action -eq "Disabled")
+if ($PDUAction -eq "Disabled")
         {
-        [String[]]$Commands = @("apc","apc","1","2","1","$Outlet","1","2","YES","{ENTER}")
+        [String[]]$Commands = @("apc","apc","1","2","1","$PDUOutlet","1","2","YES","{ENTER}")
         }
-if ($PDUNumber -eq "1")
+if ($PDUNumber -eq 1)
         {
         $PDUIP = "172.16.1.3"
         }
-if ($PDUNumber -eq "2")
+if ($PDUNumber -eq 2)
         {
         $PDUIP = "172.16.1.4"
-        }
-       
-   
+        }   
     #Attach to the remote device, setup streaming requirements
-    $Socket = New-Object System.Net.Sockets.TcpClient($PDUIP, $Port)
+    $Socket = New-Object System.Net.Sockets.TcpClient($PDUIP, $PDUPort)
     If ($Socket)
     {   $Stream = $Socket.GetStream()
         $Writer = New-Object System.IO.StreamWriter($Stream)
@@ -52,15 +50,7 @@ if ($PDUNumber -eq "2")
         }
     }
     Else     
-    {   $Result = "Unable to connect to host: $($PDUIP):$Port"
+    {   $Result = "Unable to connect to host: $($PDUIP):$PDUPort"
     }
     #Done, now save the results to a file
-    $Result | Out-File $OutputPath
-    if ($OutletState -eq "Disabled")
-        {
-        Write-Host -ForegroundColor Red "Outlet $outlet Disabled"
-        }
-    if ($OutletState -eq "Enabled")
-        {
-        Write-Host -ForegroundColor Green "Outlet $outlet Enabled"
-        }
+    $Result | Out-File $Logpath
