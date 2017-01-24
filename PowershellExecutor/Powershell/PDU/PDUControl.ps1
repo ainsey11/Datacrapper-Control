@@ -16,11 +16,11 @@ if ($PDUNumber -eq "2")
         {
         $PDUIP = "172.16.1.4"
         }  
-if ($PDUAction -eq "Enabled")
+if ($PDUAction -eq "Enable")
         {
         [String[]]$Commands = @("apc","apc","1","2","1","$PDUOutlet","1","1","YES","{ENTER}")
         }
-if ($PDUAction -eq "Disabled")
+if ($PDUAction -eq "Disable")
         {
         [String[]]$Commands = @("apc","apc","1","2","1","$PDUOutlet","1","2","YES","{ENTER}")
         }

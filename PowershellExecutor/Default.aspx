@@ -16,10 +16,10 @@
                 <h3>Please enter PDU Oulet Number</h3>
                 <asp:TextBox ID="Input_PDUOutlet" runat="server" TextMode="SingleLine" Width="20px" Height="20px" ></asp:TextBox>
                 <br /> 
-                <h3>Please enter PDU Oulet Action (On/Off)</h3>
+                <h3>Please enter PDU Oulet Action (Enable/Disable)</h3>
                 <asp:TextBox ID="Input_PDUAction" runat="server" TextMode="SingleLine" Width="50px" Height="20px" ></asp:TextBox>
                 <br />
-                <asp:Button ID="ExecuteCode" runat="server" Text="Action PDU Change" Width="200" onclick="ExecuteCode_Click" />           
+                <asp:Button ID="ExecuteCode" runat="server" Text="Action PDU Change" Width="250" onclick="ExecuteCode_Click" />           
     </div>
 </form>
 </body>

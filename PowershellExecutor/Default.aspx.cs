@@ -19,12 +19,11 @@ namespace PowerShellExecution
 
         protected void ExecuteCode_Click(object sender, EventArgs e)
         {
-                var Shell = PowerShell.Create();
-                Shell.AddScript("E:\\Documents\\GitHub\\DataCrapper-Control\\PowershellExecutor\\Powershell\\PDU\\PDUControl.ps1");
-                Shell.AddParameter("-PDUNumber", Input_PDUNumber.Text);
-                Shell.AddParameter("-PDUOutlet", Input_PDUOutlet.Text);
-                Shell.AddParameter("-PDUAction", Input_PDUAction.Text);
-                Shell.Invoke();
+            var Shell = PowerShell.Create()
+             .AddCommand("E:\\Documents\\GitHub\\DataCrapper-Control\\PowershellExecutor\\Powershell\\PDU\\PDUControl.ps1")
+            .AddParameter("PDUNumber", Input_PDUNumber.Text)
+            .AddParameter("PDUOutlet", Input_PDUOutlet.Text)
+            .AddParameter("PDUAction", Input_PDUAction.Text)
+            .Invoke();
         }
     }
-}
