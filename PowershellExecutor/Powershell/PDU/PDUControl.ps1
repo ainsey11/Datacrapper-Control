@@ -1,14 +1,21 @@
 Param (
 [Parameter(ValueFromPipeline=$true)]
-[string]$PDUAction ="Disabled",
-[int]$PDUNumber = "",
-[int]$PDUOutlet = "",
-[int]$PDUPort = "23",
-[int]$WaitTime = 300,
+[string]$PDUNumber,
+   [int]$PDUOutlet,
+[string]$PDUAction,
+   [int]$PDUPort = "23",
+   [int]$WaitTime = 300,
 [string]$LogPath = "E:\Desktop\tmp.txt"
 
 )
-
+if ($PDUNumber -eq "1")
+        {
+        $PDUIP = "172.16.1.3"
+        }
+if ($PDUNumber -eq "2")
+        {
+        $PDUIP = "172.16.1.4"
+        }  
 if ($PDUAction -eq "Enabled")
         {
         [String[]]$Commands = @("apc","apc","1","2","1","$PDUOutlet","1","1","YES","{ENTER}")
@@ -17,14 +24,7 @@ if ($PDUAction -eq "Disabled")
         {
         [String[]]$Commands = @("apc","apc","1","2","1","$PDUOutlet","1","2","YES","{ENTER}")
         }
-if ($PDUNumber -eq 1)
-        {
-        $PDUIP = "172.16.1.3"
-        }
-if ($PDUNumber -eq 2)
-        {
-        $PDUIP = "172.16.1.4"
-        }   
+ 
     #Attach to the remote device, setup streaming requirements
     $Socket = New-Object System.Net.Sockets.TcpClient($PDUIP, $PDUPort)
     If ($Socket)
