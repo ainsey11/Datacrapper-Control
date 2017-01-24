@@ -26,4 +26,5 @@ namespace PowerShellExecution
             .AddParameter("PDUAction", Input_PDUAction.Text)
             .Invoke();
         }
+        }
     }
