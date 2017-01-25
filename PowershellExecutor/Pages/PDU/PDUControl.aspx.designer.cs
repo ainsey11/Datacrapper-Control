@@ -49,13 +49,13 @@ namespace PowerShellExecution {
         protected global::System.Web.UI.WebControls.TextBox Input_PDUOutlet;
         
         /// <summary>
-        /// Input_PDUAction control.
+        /// PDUAction control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Input_PDUAction;
+        protected global::System.Web.UI.WebControls.RadioButtonList PDUAction;
         
         /// <summary>
         /// ExecuteCode control.

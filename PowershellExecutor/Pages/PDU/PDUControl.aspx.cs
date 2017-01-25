@@ -23,7 +23,7 @@ namespace PowerShellExecution
             .AddCommand(@"C:\Users\Robert\Documents\GitHub\DataCrapper-Control\PowershellExecutor\Powershell\PDU\PDUControl.ps1")
             .AddParameter("PDUNumber", PDUNumber.SelectedValue)
             .AddParameter("PDUOutlet", Input_PDUOutlet.Text)
-            .AddParameter("PDUAction", Input_PDUAction.Text)
+            .AddParameter("PDUAction", PDUAction.SelectedValue)
             .Invoke();
         }
         }
