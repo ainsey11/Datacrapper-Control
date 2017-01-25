@@ -20,8 +20,8 @@ namespace PowerShellExecution
         protected void ExecuteCode_Click(object sender, EventArgs e)
         {
             var Shell = PowerShell.Create()
-             .AddCommand("E:\\Documents\\GitHub\\DataCrapper-Control\\PowershellExecutor\\Powershell\\PDU\\PDUControl.ps1")
-            .AddParameter("PDUNumber", Input_PDUNumber.Text)
+            .AddCommand(@"C:\Users\Robert\Documents\GitHub\DataCrapper-Control\PowershellExecutor\Powershell\PDU\PDUControl.ps1")
+            .AddParameter("PDUNumber", PDUNumber.SelectedValue)
             .AddParameter("PDUOutlet", Input_PDUOutlet.Text)
             .AddParameter("PDUAction", Input_PDUAction.Text)
             .Invoke();

@@ -10,9 +10,17 @@
 <body>
 <form id="form1" runat="server">
     <div id="main">
-                <h3>Please enter PDU Number. (1 or 2) </h3>
-                <asp:TextBox ID="Input_PDUNumber" runat="server" TextMode="SingleLine" Width="20px" Height="20px" ></asp:TextBox>
-                <br />
+                <h3>Please Select PDU </h3> 
+                 <asp:RadioButtonList id="PDUNumber" runat="server">
+                 <asp:ListItem value="1">PDU 1</asp:ListItem>
+                 <asp:ListItem value="2">PDU 2</asp:ListItem>
+                 </asp:RadioButtonList>
+              
+                    
+                    
+                    
+                    
+                    <br />
                 <h3>Please enter PDU Oulet Number</h3>
                 <asp:TextBox ID="Input_PDUOutlet" runat="server" TextMode="SingleLine" Width="20px" Height="20px" ></asp:TextBox>
                 <br /> 

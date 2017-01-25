@@ -5,7 +5,7 @@ Param (
 [string]$PDUAction,
    [int]$PDUPort = "23",
    [int]$WaitTime = 300,
-[string]$LogPath = "E:\Desktop\tmp.txt"
+[string]$LogPath = "C:\Users\Robert\Desktop\PDU-Control-Log.txt"
 
 )
 if ($PDUNumber -eq "1")
