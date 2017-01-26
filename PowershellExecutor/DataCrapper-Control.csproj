@@ -76,6 +76,14 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="SharpSnmpLib.Full, Version=9.0.41121.31, Culture=neutral, PublicKeyToken=4c00852d3788e005, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lextm.SharpSnmpLib.9.0.5\lib\net45\SharpSnmpLib.Full.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SharpSnmpLib.Portable, Version=9.0.41121.31, Culture=neutral, PublicKeyToken=4c00852d3788e005, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lextm.SharpSnmpLib.9.0.5\lib\net45\SharpSnmpLib.Portable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -145,8 +153,12 @@
     <Content Include="Index.html" />
     <Content Include="Pages\PDU\PDUStats.aspx" />
     <Content Include="Powershell\PDU\PDUControl.ps1" />
+    <Content Include="Powershell\Templates\SNMPFetch.ps1" />
+    <Content Include="Powershell\PDU\PDUSNMPFetch.ps1" />
     <None Include="Properties\PublishProfiles\new.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="ReferenceDLL\SharpSnmpLib.dll" />
+    <Content Include="ReferenceDLL\SharpSnmpLib.Engine.dll" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />

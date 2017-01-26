@@ -1,5 +1,4 @@
 Param (
-[Parameter(ValueFromPipeline=$true)]
 [string]$PDUNumber,
    [int]$PDUOutlet,
 [string]$PDUAction,
