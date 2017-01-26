@@ -13,11 +13,11 @@ namespace PowershellExecutor.Pages.PDU
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            var result = Messenger.Set(VersionCode.V1,
-                                       new IP(("172.16.1.4"), 161),
-                                       new OctetString("public"),
-                                       new List<Variable> { new Variable(new ObjectIdentifier("1.3.6.1.2.1.1.6.0"), new OctetString("Shanghai")) },
-                                       60000);
+            var result = Messenger.Get(VersionCode.V1,
+                                new IPEndPoint(IPAddress.Parse("192.168.1.2"), 161),
+                                new OctetString("public"),
+                                new List<Variable> { new Variable(new ObjectIdentifier("1.3.6.1.2.1.1.1.0")) },
+                                60000);
 
         }
     }
