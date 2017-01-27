@@ -5,7 +5,7 @@ class Program
     static void Recursive(int value)
     {
                 Console.WriteLine(value);
-        Recursive(++value);
+                Recursive(++value);
     }
 
     static void Main()
