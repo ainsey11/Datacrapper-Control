@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title>Datacrapper Control Panel</title>
-     <link rel="Stylesheet" href="css/master.css" type="text/css" />
+     <link rel="Stylesheet" href="PDUControl-Style.css" type="text/css" />
     
 </head>
     
