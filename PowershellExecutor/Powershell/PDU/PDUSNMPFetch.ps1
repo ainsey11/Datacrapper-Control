@@ -11,11 +11,11 @@ Param (
 
 if ($PDUNumber -eq "1")
         {
-        $PDUIP = "172.16.1.3"
+        $IPAddress = "172.16.1.3"
         }
 if ($PDUNumber -eq "2")
         {
-        $PDUIP = "172.16.1.4"
+        $IPAdress = "172.16.1.4"
         }  
 
 Begin { 
@@ -33,21 +33,24 @@ default {$Ver = [SnmpSharpNet.SnmpVersion]::Ver2 }
 }
 Process {
 ForEach($Node in $IpAddress)  {
-$SimpleSnmp.PeerIP = $Node
-ForEach($x in $OID) {
-$Response = $SimpleSnmp.Get($Ver,$x)
-if ($Response) {
-if ($Response.Count -gt 0) {
-foreach ($var in $Response.GetEnumerator()) {
-Write-Output -InputObject ([PSCustomObject] @{
-Node = $Node
-OID = $var.Key.ToString()
-Type = [snmpsharpnet.SnmpConstants]::GetTypeName($var.Value.Type)
-Value = $var.Value.ToString()
-})
-}
-}
-} Else { Write-Warning -Message "$Node returned Null" }
-}
-}
-}
+			$SimpleSnmp.PeerIP = $Node
+				ForEach($x in $OID) {
+					$Response = $SimpleSnmp.Get($Ver,$x)
+						if ($Response) {
+							if ($Response.Count -gt 0) {
+								foreach ($var in $Response.GetEnumerator()) {
+									Write-Output -InputObject ([PSCustomObject] @{
+										Node = $Node
+										OID = $var.Key.ToString()
+										Type = [snmpsharpnet.SnmpConstants]::GetTypeName($var.Value.Type)
+										Value = $var.Value.ToString()
+										})
+									}
+								}
+							}
+					Else { 
+					Write-Warning -Message "$Node returned Null" 
+						 }
+					}
+			  }
+		}
