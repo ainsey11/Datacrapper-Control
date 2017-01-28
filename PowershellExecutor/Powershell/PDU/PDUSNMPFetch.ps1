@@ -8,9 +8,9 @@ Param (
 [String]$Version="2",
 [String]$Community = "public",
 [String]$OID=$null,
-  [int]$Port=161,
-  [int]$Retry =  1,
-  [int]$TimeOut = 2000
+   [int]$Port=161,
+   [int]$Retry =  1,
+   [int]$TimeOut = 2000
 	)
 
 if ($PDUNumber -eq "1")
@@ -21,7 +21,6 @@ if ($PDUNumber -eq "2")
         {
         $PDUIP = "172.16.1.4"
         }  
-
 
 Begin { 
 $SimpleSnmp = New-Object -TypeName SnmpSharpNet.SimpleSnmp
