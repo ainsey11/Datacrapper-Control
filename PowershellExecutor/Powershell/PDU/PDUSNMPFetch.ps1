@@ -49,7 +49,7 @@ ForEach($Node in $IpAddress)  {
 								}
 							}
 					Else { 
-					Write-Warning -Message "$Node returned Null" 
+					return "$Node returned Null"
 						 }
 					}
 			  }
