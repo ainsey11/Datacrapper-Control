@@ -1,11 +1,7 @@
 Param (
 [string]$PDUNumber,
-   [int]$PDUOutlet,
-[string]$PDUAction,
-   [int]$PDUPort = "23",
    [int]$WaitTime = 300,
-[string]$LogPath = "C:\Users\Robert\Desktop\PDU-Control-Log.txt",
-[String]$Version="2",
+[String]$Version="1",
 [String]$Community = "public",
 [String]$OID=$null,
    [int]$Port=161,
