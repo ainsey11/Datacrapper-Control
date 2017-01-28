@@ -151,6 +151,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Index.html" />
+    <Content Include="Pages\PDU\PDUControl-Style.css" />
     <Content Include="Pages\PDU\PDUStats.aspx" />
     <Content Include="Powershell\PDU\PDUControl.ps1" />
     <Content Include="Powershell\Templates\SNMPFetch.ps1" />

@@ -1,0 +1,13 @@
+﻿.ResultBox
+{
+   border-style:none;
+}
+.ResultBox:hover
+{
+   border-style:solid;
+}
+.ResultBox:focus
+{
+   border-style:solid;
+}
+
