@@ -46,10 +46,13 @@ if ($PDUAction -eq "Disable")
         While($Stream.DataAvailable) 
         {   $Read = $Stream.Read($Buffer, 0, 1024) 
             $Result += ($Encoding.GetString($Buffer, 0, $Read))
+		
         }
+		Write-Host "Command Successful"
     }
     Else     
     {   $Result = "Unable to connect to host: $($PDUIP):$PDUPort"
+		Write-Host "Unable to connect to host: $($PDUIP):$PDUPort"
     }
     #Done, now save the results to a file
     $Result | Out-File $Logpath
