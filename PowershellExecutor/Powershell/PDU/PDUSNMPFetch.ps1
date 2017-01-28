@@ -1,14 +1,58 @@
 Param (
-[string]$IP,
-[string]$Community,
-[string]$OID = 1.3.6.1.4.1.318.1.1.12.1.15,
-[int]$CommandAttempts = "2",
-[int]$timeout = "3000" 
-)
+[string]$PDUNumber,
+   [int]$PDUOutlet,
+[string]$PDUAction,
+   [int]$PDUPort = "23",
+   [int]$WaitTime = 300,
+[string]$LogPath = "C:\Users\Robert\Desktop\PDU-Control-Log.txt",
+[String]$Version="2",
+[String]$Community = "public",
+[String]$OID=$null,
+  [int]$Port=161,
+  [int]$Retry =  1,
+  [int]$TimeOut = 2000
+	)
 
-$SNMP = new-object -ComObject olePrn.OleSNMP
-$snmp.open("$IP","$community",$CommandAttempts,$timeout)
-$Outut = $snmp.Get("$OID")
+if ($PDUNumber -eq "1")
+        {
+        $PDUIP = "172.16.1.3"
+        }
+if ($PDUNumber -eq "2")
+        {
+        $PDUIP = "172.16.1.4"
+        }  
 
-echo $output
 
+Begin { 
+$SimpleSnmp = New-Object -TypeName SnmpSharpNet.SimpleSnmp
+$SimpleSnmp.Community = $Community
+$SimpleSnmp.Retry = $Retry
+$SimpleSnmp.PeerPort = $Port
+$SimpleSnmp.Timeout = $TimeOut
+[SnmpSharpNet.SnmpVersion]$ver = [SnmpSharpNet.SnmpVersion]::Ver2
+Switch($Version) {
+1 {$Ver = [SnmpSharpNet.SnmpVersion]::Ver1 }
+2 {$Ver = [SnmpSharpNet.SnmpVersion]::Ver2 }
+default {$Ver = [SnmpSharpNet.SnmpVersion]::Ver2 }
+}
+}
+Process {
+ForEach($Node in $IpAddress)  {
+$SimpleSnmp.PeerIP = $Node
+ForEach($x in $OID) {
+$Response = $SimpleSnmp.Get($Ver,$x)
+if ($Response) {
+if ($Response.Count -gt 0) {
+foreach ($var in $Response.GetEnumerator()) {
+Write-Output -InputObject ([PSCustomObject] @{
+Node = $Node
+OID = $var.Key.ToString()
+Type = [snmpsharpnet.SnmpConstants]::GetTypeName($var.Value.Type)
+Value = $var.Value.ToString()
+})
+}
+}
+} Else { Write-Warning -Message "$Node returned Null" }
+}
+}
+}
