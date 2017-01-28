@@ -4,9 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Lextm.SharpSnmpLib;
-using Lextm.SharpSnmpLib.Messaging;
-using System.Net;
+using System.Management.Automation;
+using System.Collections.ObjectModel;
+using System.Text;
+using System.Management.Automation.Runspaces;
 
 namespace PowershellExecutor.Pages.PDU
 {
@@ -14,12 +15,7 @@ namespace PowershellExecutor.Pages.PDU
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            var result = Messenger.Get(VersionCode.V1,
-                      new IPEndPoint(IPAddress.Parse("172.16.1.4"), 161),
-                             new OctetString("public"),
-                             new List<Variable> { new Variable(new ObjectIdentifier("1.3.6.1.4.1.318.1.1.12.1.15")) },
-                              60000);
-            Console.Write(result);
+        
         }
     }
 }
