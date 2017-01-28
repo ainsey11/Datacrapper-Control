@@ -4,9 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title>Datacrapper Control Panel</title>
-     <link rel="Stylesheet" href="PDUControl-Style.css" type="text/css" />
-    
-</head>
+     </head>
     
 <body>
 <form id="form1" runat="server">
@@ -29,7 +27,7 @@
                 <asp:Button ID="ExecuteCode" runat="server" Text="Action PDU Change" Width="250" onclick="ExecuteCode_Click" />           
                 <br />
                 <br />
-                <asp:TextBox ID="Resultbox" runat="server" onblur ="HideBorder()" onfocus="HideBorder()"/>
+                <asp:TextBox ID="Resultbox" runat="server" style="border:none"/>
     </div>
 </form>
 </body>
