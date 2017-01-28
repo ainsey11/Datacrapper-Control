@@ -28,8 +28,13 @@ namespace PowerShellExecution
             .AddParameter("PDUOutlet", Input_PDUOutlet.Text)
             .AddParameter("PDUAction", PDUAction.SelectedValue);
             var results = Shell.Invoke();
-            var Returned_PDUNumber = Shell.Runspace.SessionStateProxy.GetVariable("PDUNumber");
-            runspace.Close();
+            StringBuilder stringBuilder = new StringBuilder();
+            foreach (PSObject obj in results)
+            {
+                stringBuilder.AppendLine(obj.ToString());
+            }
+            Resultbox.Text = stringBuilder.ToString();
+           runspace.Close();
         }
     }
 }
