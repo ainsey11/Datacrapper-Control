@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Management.Automation;
 using System.Collections.ObjectModel;
+using System.Management.Automation.Runspaces;
 using System.Text;
 
 namespace PowerShellExecution
@@ -21,6 +22,9 @@ namespace PowerShellExecution
 
         protected void ExecuteCode_Click(object sender, EventArgs e)
         {
+
+            private string RunScript(string script)
+        {
             var Shell = PowerShell.Create()
             .AddCommand(@"C:\Users\Robert\Documents\GitHub\DataCrapper-Control\PowershellExecutor\Powershell\PDU\PDUControl.ps1")
             .AddParameter("PDUNumber", PDUNumber.SelectedValue)
@@ -28,7 +32,7 @@ namespace PowerShellExecution
             .AddParameter("PDUAction", PDUAction.SelectedValue)
             .Invoke();
 
-           Lolzbox.Text = "lovin it";
-        }
+          
+    }
     }
 }

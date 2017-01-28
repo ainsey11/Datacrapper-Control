@@ -17,8 +17,9 @@ namespace PowershellExecutor.Pages.PDU
             var result = Messenger.Get(VersionCode.V1,
                       new IPEndPoint(IPAddress.Parse("172.16.1.4"), 161),
                              new OctetString("public"),
-                             new List<Variable> { new Variable(new ObjectIdentifier("1.3.6.1.2.1.1.1.0")) },
+                             new List<Variable> { new Variable(new ObjectIdentifier("1.3.6.1.4.1.318.1.1.12.1.15")) },
                               60000);
+            Console.Write(result);
         }
     }
 }

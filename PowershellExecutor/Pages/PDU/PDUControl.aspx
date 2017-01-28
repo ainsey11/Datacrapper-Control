@@ -27,7 +27,7 @@
                  <br />
                 <asp:Button ID="ExecuteCode" runat="server" Text="Action PDU Change" Width="250" onclick="ExecuteCode_Click" />           
 
-                <asp:TextBox ID="Lolzbox" runat="server" />
+                <asp:TextBox ID="Resultbox" runat="server" />
     </div>
 </form>
 </body>
