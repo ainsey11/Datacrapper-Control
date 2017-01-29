@@ -8,15 +8,6 @@ Param (
 [int]$Port=161  
       )
 
-if ($PDUNumber -eq "1")
-        {
-        $IPAddress = "172.16.1.3"
-        }
-if ($PDUNumber -eq "2")
-        {
-        $IPAdress = "172.16.1.4"
-        }  
-
 Begin { 
 $SimpleSnmp = New-Object -TypeName SnmpSharpNet.SimpleSnmp
 $SimpleSnmp.Community = $Community
