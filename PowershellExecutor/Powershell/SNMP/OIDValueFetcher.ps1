@@ -7,8 +7,10 @@ Param (
 [int]$TimeOut = 2000,
 [int]$Port=161  
       )
+[Reflection.Assembly]::Load("System.EnterpriseServices, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a") | Out-Null
+	$publish = New-Object System.EnterpriseServices.Internal.Publish
+	$InstallToGac = $publish.GacInstall( (Resolve-Path $Path).Path )
 
-Begin { 
 $SimpleSnmp = New-Object -TypeName SnmpSharpNet.SimpleSnmp
 $SimpleSnmp.Community = $Community
 $SimpleSnmp.Retry = $Retry
@@ -20,8 +22,7 @@ Switch($Version) {
 2 {$Ver = [SnmpSharpNet.SnmpVersion]::Ver2 }
 default {$Ver = [SnmpSharpNet.SnmpVersion]::Ver2 }
 }
-}
-Process {
+
 ForEach($Node in $IP)  {
 			$SimpleSnmp.PeerIP = $Node
 				ForEach($x in $OID) {
@@ -45,4 +46,3 @@ ForEach($Node in $IP)  {
 						 }
 					}
 			  }
-		}
