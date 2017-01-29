@@ -150,16 +150,20 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Pages\NetTools\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Index.html" />
+    <Content Include="Pages\AutoVM\NewVM.aspx" />
+    <Content Include="Pages\AutoVM\RemoveVM.aspx" />
     <Content Include="Pages\PDU\PDUStats.aspx" />
     <Content Include="Pages\SNMP\OIDValueFetcher.aspx" />
     <Content Include="Powershell\PDU\PDUControl.ps1" />
     <Content Include="Powershell\SNMP\OIDValueFetcher.ps1" />
+    <Content Include="Powershell\AutoVM\NewVM.ps1" />
     <None Include="Properties\PublishProfiles\new.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="ReferenceDLL\SharpSnmpLib.dll" />
@@ -198,6 +202,7 @@
     <Content Include="Pages\PDU\PDUControl.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
+    <Content Include="todo.txt" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -214,6 +219,20 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Pages\AutoVM\NewVM.aspx.cs">
+      <DependentUpon>NewVM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AutoVM\NewVM.aspx.designer.cs">
+      <DependentUpon>NewVM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AutoVM\RemoveVM.aspx.cs">
+      <DependentUpon>RemoveVM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AutoVM\RemoveVM.aspx.designer.cs">
+      <DependentUpon>RemoveVM.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\PDU\PDUControl.aspx.cs">
       <DependentUpon>PDUControl.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
