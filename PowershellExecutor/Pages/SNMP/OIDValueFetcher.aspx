@@ -27,11 +27,17 @@
                  <br />
                  <asp:TextBox ID="Input_snmp_oid" runat="server" TextMode="SingleLine" Width="350px" Height="20px" ></asp:TextBox>
                  <br />
-                <h3>(Optional) Please Enter SNMP Timeout </h3> 
+                <h3>(Optional) Please Enter SNMP Timeout </h3> <h4>(This is set to 2000ms if no value is set)</h4>
                  <asp:TextBox ID="Input_snmp_timeout" runat="server" TextMode="SingleLine" Width="350px" Height="20px" ></asp:TextBox>
                  <br />
-                <h3>(Optional) Please Enter Amount of Retries </h3> 
+                <h3>(Optional) Please Enter Amount of Retries </h3> <h4>(This is set to 1 if no value is set)</h4>
                  <asp:TextBox ID="Input_snmp_retries" runat="server" TextMode="SingleLine" Width="350px" Height="20px" ></asp:TextBox>
+                 <br />
+                <h3>(Optional) Please Enter Wait time </h3> <h4>(This is set to 300ms if no value is set)</h4>
+                 <asp:TextBox ID="Input_snmp_wait" runat="server" TextMode="SingleLine" Width="350px" Height="20px" ></asp:TextBox>
+                 <br />
+                <h3>(Optional) Please Enter Port </h3> <h4>(This is set to 161 if no value is set)</h4>
+                 <asp:TextBox ID="Input_snmp_port" runat="server" TextMode="SingleLine" Width="350px" Height="20px" ></asp:TextBox>
                  <br />
                 <asp:TextBox ID="Output_snmp_resultbox" runat="server" style="border:none"/>
     </div>

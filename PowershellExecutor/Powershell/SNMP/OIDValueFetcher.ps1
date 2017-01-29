@@ -1,13 +1,12 @@
 Param (
-[string]$PDUNumber,
-   [int]$WaitTime = 300,
-[String]$Version="1",
+[String]$Version,
+[string]$IP,
 [String]$Community = "public",
 [String]$OID=$null,
-   [int]$Port=161,
-   [int]$Retry =  1,
-   [int]$TimeOut = 2000
-	)
+[int]$WaitTime = 300,
+[int]$TimeOut = 2000,
+[int]$Port=161  
+      )
 
 if ($PDUNumber -eq "1")
         {

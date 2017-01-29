@@ -28,8 +28,9 @@ namespace PowershellExecutor.Pages.SNMP
             .AddParameter("Community", Input_snmp_community.Text)
             .AddParameter("oid", Input_snmp_oid.Text)
             .AddParameter("timeout", Input_snmp_timeout)
-            .AddParameter("retries", Input_snmp_retries.Text);
-            
+            .AddParameter("retries", Input_snmp_retries.Text)
+            .AddParameter("WaitTime", Input_snmp_wait.Text)
+            .AddParameter("port", Input_snmp_port.Text);
             var results = Shell.Invoke();
         }
         }
