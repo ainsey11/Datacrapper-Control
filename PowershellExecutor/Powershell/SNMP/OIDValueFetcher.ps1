@@ -7,9 +7,8 @@ Param (
 [int]$TimeOut = 2000,
 [int]$Port=161  
       )
-[Reflection.Assembly]::Load("System.EnterpriseServices, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a") | Out-Null
-	$publish = New-Object System.EnterpriseServices.Internal.Publish
-	$InstallToGac = $publish.GacInstall( (Resolve-Path $Path).Path )
+
+[reflection.assembly]::LoadFrom( (Resolve-Path "C:\Users\robert\documents\Github\DataCrapper-Control\PowershellExecutor\ReferenceDLL\TritonSNMP\SharpSnmpLib.dll") )
 
 $SimpleSnmp = New-Object -TypeName SnmpSharpNet.SimpleSnmp
 $SimpleSnmp.Community = $Community

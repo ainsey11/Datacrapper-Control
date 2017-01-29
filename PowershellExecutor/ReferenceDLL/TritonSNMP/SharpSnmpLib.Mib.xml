@@ -1,0 +1,364 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SharpSnmpLib.Mib</name>
+    </assembly>
+    <members>
+        <member name="T:Lextm.SharpSnmpLib.Mib.Assembler">
+            <summary>
+            MIB assembler.
+            </summary>
+        </member>
+        <member name="M:Lextm.SharpSnmpLib.Mib.Assembler.#ctor(System.String)">
+            <summary>
+            Creates an instance of <see cref="T:Lextm.SharpSnmpLib.Mib.Assembler"/>.
+            </summary>
+            <param name="folder">Folder.</param>
+        </member>
+        <member name="M:Lextm.SharpSnmpLib.Mib.Assembler.Assemble(System.Collections.Generic.IEnumerable{Lextm.SharpSnmpLib.IModule})">
+            <summary>
+            Assemblers modules.
+            </summary>
+            <param name="modules">Modules.</param>
+        </member>
+        <member name="P:Lextm.SharpSnmpLib.Mib.Assembler.Folder">
+            <summary>
+            Folder.
+            </summary>
+        </member>
+        <member name="P:Lextm.SharpSnmpLib.Mib.Assembler.Tree">
+            <summary>
+            Tree.
+            </summary>
+        </member>
+        <member name="T:Lextm.SharpSnmpLib.Mib.DefaultObjectRegistry">
+            <summary>
+            Default object registry.
+            </summary>
+        </member>
+        <member name="T:Lextm.SharpSnmpLib.Mib.ObjectRegistryBase">
+            <summary>
+            Base class of object registry.
+            </summary>
+        </member>
+        <member name="M:Lextm.SharpSnmpLib.Mib.ObjectRegistryBase.IsTableId(System.UInt32[])">
+            <summary>
+            Indicates that if the specific OID is a table.
+            </summary>
+            <param name="id">OID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Lextm.SharpSnmpLib.Mib.ObjectRegistryBase.ValidateTable(Lextm.SharpSnmpLib.ObjectIdentifier)">
+            <summary>
+            Validates if an <see cref="T:Lextm.SharpSnmpLib.ObjectIdentifier"/> is a table.
+            </summary>
+            <param name="identifier">The object identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Lextm.SharpSnmpLib.Mib.ObjectRegistryBase.Translate(System.String)">
+            <summary>
+            Gets numercial form from textual form.
+            </summary>
+            <param name="textual">Textual</param>
+            <returns></returns>
+        </member>
+        <member name="M:Lextm.SharpSnmpLib.Mib.ObjectRegistryBase.Translate(System.String,System.String)">
+            <summary>
+            Gets numerical form from textual form.
+            </summary>
+            <param name="moduleName">Module name</param>
+            <param name="name">Object name</param>
+            <returns></returns>
+        </member>
+        <member name="M:Lextm.SharpSnmpLib.Mib.ObjectRegistryBase.Translate(System.UInt32[])">
+            <summary>
+            Gets textual form from numerical form.
+            </summary>
+            <param name="numerical">Numerical form</param>
+            <returns></returns>
+        </member>
+        <member name="M:Lextm.SharpSnmpLib.Mib.ObjectRegistryBase.CompileFolder(System.String,System.String)">
+            <summary>
+            Loads a folder of MIB files.
+            </summary>
+            <param name="folder">Folder</param>
+            <param name="pattern">MIB file pattern</param>
+        </member>
+        <member name="M:Lextm.SharpSnmpLib.Mib.ObjectRegistryBase.CompileFiles(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Loads MIB files.
+            </summary>
+            <param name="fileNames">File names.</param>
+        </member>
+        <member name="M:Lextm.SharpSnmpLib.Mib.ObjectRegistryBase.Compile(System.String)">
+            <summary>
+            Loads a MIB file.
+            </summary>
+            <param name="fileName">File name</param>
+            <param name="errors">Errors.</param>
+        </member>
+        <member name="M:Lextm.SharpSnmpLib.Mib.ObjectRegistryBase.Import(System.Collections.Generic.IEnumerable{Lextm.SharpSnmpLib.IModule})">
+            <summary>
+            Imports instances of <see cref="T:Lextm.SharpSnmpLib.Mib.MibModule"/>.
+            </summary>
+            <param name="modules">Modules.</param>
+        </member>
+        <member name="M:Lextm.SharpSnmpLib.Mib.ObjectRegistryBase.Refresh">
+            <summary>
+            Refreshes.
+            </summary>
+            <remarks>This method raises an <see cref="E:Lextm.SharpSnmpLib.Mib.ObjectRegistryBase.OnChanged"/> event. </remarks>
+        </member>
+        <member name="M:Lextm.SharpSnmpLib.Mib.ObjectRegistryBase.CreateVariable(System.String)">
+            <summary>
+            Creates a variable.
+            </summary>
+            <param name="textual">The textual.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Lextm.SharpSnmpLib.Mib.ObjectRegistryBase.CreateVariable(System.String,Lextm.SharpSnmpLib.ISnmpData)">
+            <summary>
+            Creates a variable.
+            </summary>
+            <param name="textual">The textual ID.</param>
+            <param name="data">The data.</param>
+            <returns></returns>
+        </member>
+        <member name="P:Lextm.SharpSnmpLib.Mib.ObjectRegistryBase.Tree">
+            <summary>
+            Object tree.
+            </summary>
+        </member>
+        <member name="E:Lextm.SharpSnmpLib.Mib.ObjectRegistryBase.OnChanged">
+            <summary>
+            This event occurs when new documents are loaded.
+            </summary>
+        </member>
+        <member name="P:Lextm.SharpSnmpLib.Mib.DefaultObjectRegistry.Instance">
+            <summary>
+            Default instance.
+            </summary>
+        </member>
+        <member name="T:Lextm.SharpSnmpLib.Mib.Definition">
+            <summary>
+            Definition class.
+            </summary>
+        </member>
+        <member name="M:Lextm.SharpSnmpLib.Mib.Definition.#ctor(Lextm.SharpSnmpLib.IEntity,Lextm.SharpSnmpLib.Mib.Definition)">
+            <summary>
+            Creates a <see cref="T:Lextm.SharpSnmpLib.Mib.Definition"/> instance.
+            </summary>
+            <param name="parent"></param>
+            <param name="entity"></param>
+        </member>
+        <member name="M:Lextm.SharpSnmpLib.Mib.Definition.GetChildAt(System.UInt32)">
+            <summary>
+            Indexer.
+            </summary>
+        </member>
+        <member name="M:Lextm.SharpSnmpLib.Mib.Definition.GetNumericalForm">
+            <summary>
+            Gets the numerical form.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Lextm.SharpSnmpLib.Mib.Definition.Add(Lextm.SharpSnmpLib.IEntity)">
+            <summary>
+            Add an <see cref="T:Lextm.SharpSnmpLib.IEntity"/> node.
+            </summary>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Lextm.SharpSnmpLib.Mib.Definition.Append(Lextm.SharpSnmpLib.IDefinition)">
+            <summary>
+            Adds a <see cref="T:Lextm.SharpSnmpLib.Mib.Definition"/> child to this <see cref="T:Lextm.SharpSnmpLib.Mib.Definition"/>.
+            </summary>
+            <param name="def"></param>
+        </member>
+        <member name="P:Lextm.SharpSnmpLib.Mib.Definition.Value">
+            <summary>
+            Value.
+            </summary>
+        </member>
+        <member name="P:Lextm.SharpSnmpLib.Mib.Definition.Children">
+            <summary>
+            Children definitions.
+            </summary>
+        </member>
+        <member name="P:Lextm.SharpSnmpLib.Mib.Definition.TextualForm">
+            <summary>
+            Returns the textual form.
+            </summary>
+        </member>
+        <member name="P:Lextm.SharpSnmpLib.Mib.Definition.Module">
+            <summary>
+            Module name.
+            </summary>
+        </member>
+        <member name="P:Lextm.SharpSnmpLib.Mib.Definition.Name">
+            <summary>
+            Name.
+            </summary>
+        </member>
+        <member name="T:Lextm.SharpSnmpLib.Mib.CompilerError">
+            <summary>
+            Description of CompilerError.
+            </summary>
+        </member>
+        <member name="M:Lextm.SharpSnmpLib.Mib.CompilerError.#ctor(Antlr.Runtime.RecognitionException,System.String)">
+            <summary>
+            Creates a <see cref="T:Lextm.SharpSnmpLib.Mib.CompilerError"/> instance with a specific <see cref="T:System.Exception"/>.
+            </summary>
+            <param name="exception">Compiler exception.</param>
+        </member>
+        <member name="M:Lextm.SharpSnmpLib.Mib.CompilerError.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this <see cref="T:Lextm.SharpSnmpLib.Mib.CompilerError"/>.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Lextm.SharpSnmpLib.Mib.ModuleLoader">
+            <summary>
+            Description of ModuleLoader.
+            </summary>
+        </member>
+        <member name="T:Lextm.SharpSnmpLib.Mib.ObjectTree">
+            <summary>
+            Object tree class.
+            </summary>
+        </member>
+        <member name="M:Lextm.SharpSnmpLib.Mib.ObjectTree.#ctor">
+            <summary>
+            Creates an <see cref="T:Lextm.SharpSnmpLib.Mib.ObjectTree"/> instance.
+            </summary>
+        </member>
+        <member name="M:Lextm.SharpSnmpLib.Mib.ObjectTree.ExtractName(System.String)">
+            <summary>
+            Extracts the name.
+            </summary>
+            <param name="input">The input.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Lextm.SharpSnmpLib.Mib.ObjectTree.ExtractValue(System.String)">
+            <summary>
+            Extracts the value.
+            </summary>
+            <param name="input">The input.</param>
+            <returns></returns>
+        </member>
+        <member name="P:Lextm.SharpSnmpLib.Mib.ObjectTree.Root">
+            <summary>
+            Root definition.
+            </summary>
+        </member>
+        <member name="P:Lextm.SharpSnmpLib.Mib.ObjectTree.LoadedModules">
+            <summary>
+            Loaded MIB modules.
+            </summary>
+        </member>
+        <member name="P:Lextm.SharpSnmpLib.Mib.ObjectTree.PendingModules">
+            <summary>
+            Pending MIB modules.
+            </summary>
+        </member>
+        <member name="T:Lextm.SharpSnmpLib.Mib.Parser">
+            <summary>
+            Description of Parser.
+            </summary>
+        </member>
+        <member name="M:Lextm.SharpSnmpLib.Mib.Parser.ParseToModules(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{Lextm.SharpSnmpLib.Mib.CompilerError}@,System.Collections.Generic.IEnumerable{Lextm.SharpSnmpLib.Mib.CompilerWarning}@)">
+            <summary>
+            Parses MIB documents to module files (*.module).
+            </summary>
+            <param name="files">The files.</param>
+            <param name="errors">The errors.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Lextm.SharpSnmpLib.Mib.Parser.Compile(System.String,System.Collections.Generic.List{Lextm.SharpSnmpLib.Mib.CompilerError},System.Collections.Generic.List{Lextm.SharpSnmpLib.Mib.CompilerWarning})">
+            <summary>
+            Loads a MIB file.
+            </summary>
+            <param name="fileName">File name.</param>
+            <param name="errors">Errors.</param>
+        </member>
+        <member name="M:Lextm.SharpSnmpLib.Mib.Parser.Compile(System.IO.Stream,System.Collections.Generic.List{Lextm.SharpSnmpLib.Mib.CompilerError},System.Collections.Generic.List{Lextm.SharpSnmpLib.Mib.CompilerWarning})">
+            <summary>
+            Loads a MIB file.
+            </summary>
+        </member>
+        <member name="T:Lextm.SharpSnmpLib.Mib.ReloadableObjectRegistry">
+            <summary>
+            Object registry.
+            </summary>
+        </member>
+        <member name="M:Lextm.SharpSnmpLib.Mib.ReloadableObjectRegistry.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lextm.SharpSnmpLib.Mib.ReloadableObjectRegistry"/> class.
+            </summary>
+            <param name="path">The path.</param>
+        </member>
+        <member name="M:Lextm.SharpSnmpLib.Mib.ReloadableObjectRegistry.Reload">
+            <summary>
+            Reloads the registry.
+            </summary>
+        </member>
+        <member name="P:Lextm.SharpSnmpLib.Mib.ReloadableObjectRegistry.Path">
+            <summary>
+            Gets the path.
+            </summary>
+            <value>The path.</value>
+        </member>
+        <member name="T:Lextm.SharpSnmpLib.Mib.SemanticException">
+            <summary>
+            Semantic exception.
+            </summary>
+        </member>
+        <member name="M:Lextm.SharpSnmpLib.Mib.SemanticException.#ctor(Antlr.Runtime.IToken)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lextm.SharpSnmpLib.Mib.SemanticException"/> class.
+            </summary>
+            <param name="token">The wrong token.</param>
+        </member>
+        <member name="T:Lextm.SharpSnmpLib.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Lextm.SharpSnmpLib.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Lextm.SharpSnmpLib.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Lextm.SharpSnmpLib.Properties.Resources.SNMPV2_CONF">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Lextm.SharpSnmpLib.Properties.Resources.SNMPV2_MIB">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Lextm.SharpSnmpLib.Properties.Resources.SNMPV2_SMI">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Lextm.SharpSnmpLib.Properties.Resources.SNMPV2_TC">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Lextm.SharpSnmpLib.Properties.Resources.SNMPV2_TM">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+    </members>
+</doc>
