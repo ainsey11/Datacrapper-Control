@@ -152,9 +152,11 @@
     </Content>
     <Content Include="Index.html" />
     <Content Include="Pages\PDU\PDUStats.aspx" />
+    <Content Include="Pages\SNMP\SNMPGetValue.aspx" />
     <Content Include="Powershell\PDU\PDUControl.ps1" />
     <Content Include="Powershell\Templates\SNMPFetch.ps1" />
-    <Content Include="Powershell\PDU\PDUSNMPFetch.ps1" />
+    <Content Include="Powershell\PDU\SNMPPDUFetch.ps1" />
+    <Content Include="Powershell\PDU\SNMPValueFetcher.ps1" />
     <None Include="Properties\PublishProfiles\new.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="ReferenceDLL\SharpSnmpLib.dll" />
@@ -226,6 +228,13 @@
     </Compile>
     <Compile Include="Pages\PDU\PDUStats.aspx.designer.cs">
       <DependentUpon>PDUStats.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SNMP\SNMPGetValue.aspx.cs">
+      <DependentUpon>SNMPGetValue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SNMP\SNMPGetValue.aspx.designer.cs">
+      <DependentUpon>SNMPGetValue.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
