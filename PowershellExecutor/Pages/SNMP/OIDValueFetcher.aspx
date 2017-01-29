@@ -40,7 +40,7 @@
                  <asp:TextBox ID="Input_snmp_port" runat="server" TextMode="SingleLine" Width="350px" Height="20px" ></asp:TextBox>
                  <br />
                 <h3>The SNMP Value returned is:</h3>
-                <asp:TextBox ID="Output_snmp_resultbox" runat="server"/>
+                <asp:TextBox ID="Output_snmp_resultbox" runat="server" style="border:none"/>
     </div>
     </form>
 </body>
