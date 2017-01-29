@@ -22,7 +22,7 @@ default {$Ver = [SnmpSharpNet.SnmpVersion]::Ver2 }
 }
 }
 Process {
-ForEach($Node in $IpAddress)  {
+ForEach($Node in $IP)  {
 			$SimpleSnmp.PeerIP = $Node
 				ForEach($x in $OID) {
 					$Response = $SimpleSnmp.Get($Ver,$x)
@@ -35,6 +35,8 @@ ForEach($Node in $IpAddress)  {
 										Type = [snmpsharpnet.SnmpConstants]::GetTypeName($var.Value.Type)
 										Value = $var.Value.ToString()
 										})
+									$returnedvalue = $var.Value.ToString()
+									return $returnedvalue
 									}
 								}
 							}
