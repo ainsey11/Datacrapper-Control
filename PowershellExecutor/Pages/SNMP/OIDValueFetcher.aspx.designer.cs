@@ -94,13 +94,13 @@ namespace PowershellExecutor.Pages.SNMP {
         protected global::System.Web.UI.WebControls.TextBox Input_snmp_port;
         
         /// <summary>
-        /// SNMP_ExecCode_OnClick control.
+        /// Action_SNMP control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button SNMP_ExecCode_OnClick;
+        protected global::System.Web.UI.WebControls.Button Action_SNMP;
         
         /// <summary>
         /// Output_snmp_resultbox control.

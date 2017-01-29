@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang ="English">
 <head runat="server">
     <title>Datacrapper </title>
 </head>
@@ -39,7 +39,7 @@
                 <h3>(Optional) Please Enter Port </h3> <h4>(This is set to 161 if no value is set)</h4>
                  <asp:TextBox ID="Input_snmp_port" runat="server" TextMode="SingleLine" Width="350px" Height="20px" ></asp:TextBox>
                  <br />
-                <asp:Button ID="SNMP_ExecCode_OnClick" runat="server" Text="Get SNMP Value" Width="250" onclick="SNMP_ExecCode_OnClick" />  
+                <asp:Button ID="Action_SNMP" runat="server" Text="Get SNMP Value" Width="250" onclick="SNMP_ExecCode_OnClick" />  
                 <br />
                 <h3>The SNMP Value returned is:</h3>
                 <asp:TextBox ID="Output_snmp_resultbox" runat="server" style="border:none"/>
