@@ -32,6 +32,13 @@ namespace PowershellExecutor.Pages.SNMP
             .AddParameter("WaitTime", Input_snmp_wait.Text)
             .AddParameter("port", Input_snmp_port.Text);
             var results = Shell.Invoke();
+            StringBuilder stringBuilder = new StringBuilder();
+            foreach (PSObject obj in results)
+            {
+                stringBuilder.AppendLine(obj.ToString());
+            }
+            Output_snmp_resultbox.Text = stringBuilder.ToString();
+            snmpoidrunspace.Close();
         }
         }
     }
