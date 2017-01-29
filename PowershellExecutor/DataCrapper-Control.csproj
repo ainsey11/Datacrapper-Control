@@ -159,8 +159,7 @@
     <Content Include="Pages\PDU\PDUStats.aspx" />
     <Content Include="Pages\SNMP\OIDValueFetcher.aspx" />
     <Content Include="Powershell\PDU\PDUControl.ps1" />
-    <Content Include="Powershell\PDU\SNMPPDUFetch.ps1" />
-    <Content Include="Powershell\PDU\SNMPValueFetcher.ps1" />
+    <Content Include="Powershell\SNMP\OIDValueFetcher.ps1" />
     <None Include="Properties\PublishProfiles\new.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="ReferenceDLL\SharpSnmpLib.dll" />

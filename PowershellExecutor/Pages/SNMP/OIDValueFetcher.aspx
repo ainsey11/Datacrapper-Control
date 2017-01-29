@@ -10,10 +10,30 @@
    <form id="form1" runat="server">
     <div id="main">
                 <h3>Please Select SNMP Version </h3> 
-                 <asp:RadioButtonList id="IP" runat="server">
+                 <asp:RadioButtonList id="Input_snmp_version" runat="server">
                  <asp:ListItem value="1">1</asp:ListItem>
                  <asp:ListItem value="2">2</asp:ListItem>
                  </asp:RadioButtonList>  
+                 <br />
+                 <h3> Please Enter Device IP Address</h3>
+                 <br />
+                 <asp:TextBox ID="Input_snmp_ip" runat="server" TextMode="SingleLine" Width="350px" Height="20px" ></asp:TextBox>
+                 <br />
+                <h3> Please Enter Device SNMP Community</h3>
+                 <br />
+                 <asp:TextBox ID="Input_snmp_community" runat="server" TextMode="SingleLine" Width="350px" Height="20px" ></asp:TextBox>
+                 <br />
+                <h3> Please Enter OID for the value you wish to view</h3>
+                 <br />
+                 <asp:TextBox ID="Input_snmp_oid" runat="server" TextMode="SingleLine" Width="350px" Height="20px" ></asp:TextBox>
+                 <br />
+                <h3>(Optional) Please Enter SNMP Timeout </h3> 
+                 <asp:TextBox ID="Input_snmp_timeout" runat="server" TextMode="SingleLine" Width="350px" Height="20px" ></asp:TextBox>
+                 <br />
+                <h3>(Optional) Please Enter Amount of Retries </h3> 
+                 <asp:TextBox ID="Input_snmp_retries" runat="server" TextMode="SingleLine" Width="350px" Height="20px" ></asp:TextBox>
+                 <br />
+                <asp:TextBox ID="Output_snmp_resultbox" runat="server" style="border:none"/>
     </div>
     </form>
 </body>

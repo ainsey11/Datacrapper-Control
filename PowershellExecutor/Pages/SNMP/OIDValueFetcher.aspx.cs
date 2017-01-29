@@ -22,10 +22,16 @@ namespace PowershellExecutor.Pages.SNMP
             Runspace snmpoidrunspace = RunspaceFactory.CreateRunspace();
             snmpoidrunspace.Open();
             var Shell = PowerShell.Create()
-            .AddCommand(@"C:\Users\Robert\Documents\GitHub\DataCrapper-Control\PowershellExecutor\Powershell\Generic\SNMP\SNMPValueFetcher.ps1")
-            .AddParameter("PDUNumber", IP.SelectedValue);
+            .AddCommand(@"C:\Users\Robert\Documents\GitHub\DataCrapper-Control\PowershellExecutor\Powershell\SNMP\OIDValueFetcher.ps1")
+            .AddParameter("Version", Input_snmp_version.SelectedValue)
+            .AddParameter("IP", Input_snmp_ip.Text)
+            .AddParameter("Community", Input_snmp_community.Text)
+            .AddParameter("oid", Input_snmp_oid.Text)
+            .AddParameter("timeout", Input_snmp_timeout)
+            .AddParameter("retries", Input_snmp_retries.Text);
+            
             var results = Shell.Invoke();
-
+        }
         }
     }
 }
