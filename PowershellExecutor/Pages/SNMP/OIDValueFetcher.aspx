@@ -39,7 +39,8 @@
                 <h3>(Optional) Please Enter Port </h3> <h4>(This is set to 161 if no value is set)</h4>
                  <asp:TextBox ID="Input_snmp_port" runat="server" TextMode="SingleLine" Width="350px" Height="20px" ></asp:TextBox>
                  <br />
-                <asp:TextBox ID="Output_snmp_resultbox" runat="server" style="border:none"/>
+                <h3>The SNMP Value returned is:</h3>
+                <asp:TextBox ID="Output_snmp_resultbox" runat="server"/>
     </div>
     </form>
 </body>
