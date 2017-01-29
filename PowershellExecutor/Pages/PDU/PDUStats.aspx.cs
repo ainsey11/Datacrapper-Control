@@ -22,18 +22,12 @@ namespace PowershellExecutor.Pages.PDU
             Runspace runspace = RunspaceFactory.CreateRunspace();
         runspace.Open();
             var Shell = PowerShell.Create()
-            .AddCommand(@"C:\Users\Robert\Documents\GitHub\DataCrapper-Control\PowershellExecutor\Powershell\PDU\PDUControl.ps1")
+            .AddCommand(@"C:\Users\Robert\Documents\GitHub\DataCrapper-Control\PowershellExecutor\Powershell\PDU\PDUSNMPFetch.ps1")
             .AddParameter("PDUNumber", PDUNumber.SelectedValue)
             .AddParameter("PDUOutlet", Input_PDUOutlet.Text)
             .AddParameter("PDUAction", PDUAction.SelectedValue);
-        var results = Shell.Invoke();
-        StringBuilder stringBuilder = new StringBuilder();
-            foreach (PSObject obj in results)
-            {
-                stringBuilder.AppendLine(obj.ToString());
-            }
-           Resultbox.Text = stringBuilder.ToString();
-           runspace.Close();
+            var results = Shell.Invoke();
+        
         }
     }
 }
