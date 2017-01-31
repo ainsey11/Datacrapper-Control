@@ -25,7 +25,7 @@ if ( !(Get-Module -Name VMware.VimAutomation.Core -ErrorAction SilentlyContinue)
     Exit 99
 }
 $password = "1A2D5^7*kbD02v"
-Connect-VIServer 172.16.1.12 -User Datacrapper -Password 1A2D5^7*kbD02v $password
+Connect-VIServer 172.16.1.12 -User Datacrapper -Password $password
 
 
 New-VM -Name $VmName -CD $VMCD -Datastore $VMDatastore -Description $VMDescription -DiskMB $VMDiskMB -DiskStorageFormat $VMDiskStorageFormat -GuestId $VMGuestID -MemoryMB $VMMemoryMB -NumCPU $VMNumCPU 
