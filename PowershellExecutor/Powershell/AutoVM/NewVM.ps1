@@ -1,12 +1,12 @@
 param (
 $VmwareServer = "172.16.1.12",
-$VmName,
+$VmName ,
 $VMDatastore,
 $VMDescription,
-$VMDiskMB,
-$VMDiskStorageFormat = "Thin",
+$VMDiskGB,
+$VMDiskStorageFormat,
 $VMGuestID,
-$VMMemoryMB,
+$VMMemoryGB,
 $VMNumCPU,
 [string] $password = "1A2D5^7*kbD02v"
 )
@@ -19,5 +19,7 @@ New-VM -Name $VmName -CD -Datastore $VMDatastore -Description $VMDescription -Di
 Catch
 {
 Return "Oh Noes! Something went wrong!"
+Disconnect-VIServer -Force
 }
 Return "$VMName has been created"
+Disconnect-VIServer -Force
