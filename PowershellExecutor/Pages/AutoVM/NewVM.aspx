@@ -10,7 +10,7 @@
     <div id ="main">
     <h3> Please fill out the below form to provision a new VM</h3>
        <br />
-        <h5 style="color:green">VMware Status is:</h5>
+        <asp:Button ID="Check_VM_Ping" runat="server" Text="Create new VM" Width="250" onclick="VmwarePing_ExecuteCode_Click" />
         <asp:TextBox ID="Output_VM_Ping" runat="server" style="border:none"/>
        <br />
         <h4> Please Enter a name for this VM </h4>
