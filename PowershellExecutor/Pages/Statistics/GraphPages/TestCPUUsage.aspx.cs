@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace PowershellExecutor.Pages.AutoVM
+namespace PowershellExecutor.Pages.Statistics.GraphPages
 {
-    public partial class RemoveVM : System.Web.UI.Page
+    public partial class TestCPUUsage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

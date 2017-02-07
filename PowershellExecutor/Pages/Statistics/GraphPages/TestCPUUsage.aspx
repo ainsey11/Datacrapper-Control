@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RemoveVM.aspx.cs" Inherits="PowershellExecutor.Pages.AutoVM.RemoveVM" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TestCPUUsage.aspx.cs" Inherits="PowershellExecutor.Pages.Statistics.GraphPages.TestCPUUsage" %>
 
 <!DOCTYPE html>
 

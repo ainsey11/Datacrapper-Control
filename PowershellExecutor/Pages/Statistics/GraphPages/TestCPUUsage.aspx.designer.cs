@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PowershellExecutor.Pages.AutoVM
+namespace PowershellExecutor.Pages.Statistics.GraphPages
 {
 
 
-    public partial class RemoveVM
+    public partial class TestCPUUsage
     {
 
         /// <summary>

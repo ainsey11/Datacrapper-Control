@@ -158,9 +158,11 @@
     </Content>
     <Content Include="Index.html" />
     <Content Include="Pages\AutoVM\NewVM.aspx" />
-    <Content Include="Pages\AutoVM\RemoveVM.aspx" />
     <Content Include="Pages\PDU\PDUStats.aspx" />
     <Content Include="Pages\SNMP\OIDValueFetcher.aspx" />
+    <Content Include="Pages\Statistics\GraphBuilder\placeholder.txt" />
+    <Content Include="Pages\Statistics\GraphPages\TestCPUUsage.aspx" />
+    <Content Include="Pages\Statistics\Index.html" />
     <Content Include="Powershell\PDU\PDUControl.ps1" />
     <Content Include="Powershell\SNMP\OIDValueFetcher.ps1" />
     <Content Include="Powershell\AutoVM\NewVM.ps1" />
@@ -227,13 +229,6 @@
     <Compile Include="Pages\AutoVM\NewVM.aspx.designer.cs">
       <DependentUpon>NewVM.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\AutoVM\RemoveVM.aspx.cs">
-      <DependentUpon>RemoveVM.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\AutoVM\RemoveVM.aspx.designer.cs">
-      <DependentUpon>RemoveVM.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Pages\PDU\PDUControl.aspx.cs">
       <DependentUpon>PDUControl.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -257,6 +252,13 @@
     </Compile>
     <Compile Include="Pages\SNMP\OIDValueFetcher.aspx.designer.cs">
       <DependentUpon>OIDValueFetcher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Statistics\GraphPages\TestCPUUsage.aspx.cs">
+      <DependentUpon>TestCPUUsage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Statistics\GraphPages\TestCPUUsage.aspx.designer.cs">
+      <DependentUpon>TestCPUUsage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
