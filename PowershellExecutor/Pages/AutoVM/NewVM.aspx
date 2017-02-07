@@ -26,7 +26,7 @@
         <h4>Please enter disk size in MB</h4>
         <asp:TextBox ID="Input_VMDiskMB" runat ="server" TextMode="SingleLine" Width="50px" Height="20px" ></asp:TextBox>
         <br />       
-        <h4> Please select disk storage format (default is Thin if none selected</h4>
+        <h4> Please select disk storage format (default is Thin if none selected)</h4>
          <asp:RadioButtonList id="Input_VMDiskStorageFormat" runat="server">
                  <asp:ListItem value="Thick">Thick</asp:ListItem>
                  <asp:ListItem value="Thin">Thin</asp:ListItem>
