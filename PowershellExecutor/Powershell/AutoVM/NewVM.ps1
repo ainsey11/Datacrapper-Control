@@ -12,13 +12,12 @@ $VMNumCPU,
 )
 Add-PsSnapin VMware.VimAutomation.Core -ErrorAction Stop
 Connect-VIServer 172.16.1.12 -User datacrapper -Password $password -WarningAction SilentlyContinue -ErrorAction Stop
-New-VM -Name $VmName -CD -Datastore $VMDatastore -Description $VMDescription -DiskGB $VMDiskGB -DiskStorageFormat $VMDiskStorageFormat -GuestId $VMGuestID -MemoryGB $VMMemoryGB -NumCPU $VMNumCPU -VMHost $VmwareServer -ErrorVariable $errorvar
-
-if ($errorvar)
+Try
 {
-Return $errorvar
+New-VM -Name $VmName -CD -Datastore $VMDatastore -Description $VMDescription -DiskGB $VMDiskGB -DiskStorageFormat $VMDiskStorageFormat -GuestId $VMGuestID -MemoryGB $VMMemoryGB -NumCPU $VMNumCPU -VMHost $VmwareServer -Erroraction Stop
 }
-
-else{
+Catch
+{
+Return "Oh Noes! Something went wrong!"
+}
 Return "$VMName has been created"
-}
