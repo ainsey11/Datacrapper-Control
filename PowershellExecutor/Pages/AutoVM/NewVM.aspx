@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PDUControl.aspx.cs" Inherits="PowerShellExecution.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="NewVM.aspx.cs" Inherits="PowerShellExecution.Default" %>
  
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -43,6 +43,11 @@
         <asp:TextBox ID="Input_VMMemoryMB" runat ="server" TextMode="SingleLine" Width="50px" Height="20px" ></asp:TextBox>
         <h4> Please enter desired number of vCPU Cores</h4>
         <asp:TextBox ID="Input_VMNumCPU" runat ="server" TextMode="SingleLine" Width="10px" Height="20px" ></asp:TextBox>
+        <br />
+        <asp:Button ID="Action_CreateVM" runat="server" Text="Create new VM" Width="250" onclick="NewVM_ExecuteCode_Click" />  
+        <br />
+        <h3>Status:</h3>
+        <asp:TextBox ID="Output_VMCreation_resultbox" runat="server" style="border:none"/>
     </div>
     </form>
 </body>

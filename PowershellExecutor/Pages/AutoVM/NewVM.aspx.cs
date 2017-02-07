@@ -9,7 +9,7 @@ using System.Collections.ObjectModel;
 using System.Text;
 using System.Management.Automation.Runspaces;
 
-namespace PowerShellExecution
+namespace PowerShellExecution.Pages.AutoVM.NewVM
 {
     public partial class Default : System.Web.UI.Page
     {
@@ -18,7 +18,7 @@ namespace PowerShellExecution
 
         }
 
-        protected void ExecuteCode_Click(object sender, EventArgs e)
+        protected void NewVM_ExecuteCode_Click(object sender, EventArgs e)
         {
             Runspace runspace = RunspaceFactory.CreateRunspace();
             runspace.Open();

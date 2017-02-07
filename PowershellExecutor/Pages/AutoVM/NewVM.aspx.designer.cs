@@ -101,5 +101,23 @@ namespace PowerShellExecution {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Input_VMNumCPU;
+        
+        /// <summary>
+        /// Action_CreateVM control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Action_CreateVM;
+        
+        /// <summary>
+        /// Output_VMCreation_resultbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Output_VMCreation_resultbox;
     }
 }
