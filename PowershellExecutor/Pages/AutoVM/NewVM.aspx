@@ -23,6 +23,11 @@
                  <asp:ListItem value="No">No</asp:ListItem>
                  </asp:RadioButtonList>
         <br />
+        <h4> What Datastore should this reside on?</h4>
+        <asp:RadioButtonList id="Input_VMDatastore" runat="server">
+                 <asp:ListItem value="[A11-VH-1-DS-1]">[A11-VH-1-DS-1]</asp:ListItem>
+                 </asp:RadioButtonList>
+        <br />
         <h4>Please enter disk size in MB</h4>
         <asp:TextBox ID="Input_VMDiskMB" runat ="server" TextMode="SingleLine" Width="50px" Height="20px" ></asp:TextBox>
         <br />       

@@ -58,6 +58,15 @@ namespace PowershellExecutor.Pages.AutoVM {
         protected global::System.Web.UI.WebControls.RadioButtonList Input_VMCD;
         
         /// <summary>
+        /// Input_VMDatastore control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList Input_VMDatastore;
+        
+        /// <summary>
         /// Input_VMDiskMB control.
         /// </summary>
         /// <remarks>

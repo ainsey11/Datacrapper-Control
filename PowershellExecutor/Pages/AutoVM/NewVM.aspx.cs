@@ -25,20 +25,20 @@ namespace PowershellExecutor.Pages.AutoVM
             .AddCommand(@"C:\Users\Robert\Documents\GitHub\DataCrapper-Control\PowershellExecutor\Powershell\AutoVM\NewVM.ps1")
             .AddParameter("VMName", Input_VmName.Text)
             .AddParameter("VMCD", Input_VMCD.SelectedValue)
-            .AddParameter("VMDatastore", Input_)
-            .AddParameter("VMDescription",)
-            .AddParameter("VMDiskMB", )
-            .AddParameter("VMDiskStorageFormat", )
-            .AddParameter("VMGuestID", )
-            .AddParameter("VMMemoryMB", )
-            .AddParameter("VMNumCPU", );
+            .AddParameter("VMDatastore", Input_VMDatastore.SelectedValue)
+            .AddParameter("VMDescription",Input_VMDescription.Text)
+            .AddParameter("VMDiskMB", Input_VMDiskMB.Text)
+            .AddParameter("VMDiskStorageFormat", Input_VMDiskStorageFormat)
+            .AddParameter("VMGuestID", Input_VMGuestID)
+            .AddParameter("VMMemoryMB", Input_VMMemoryMB )
+            .AddParameter("VMNumCPU", Input_VMNumCPU);
             var results = Shell.Invoke();
             StringBuilder stringBuilder = new StringBuilder();
             foreach (PSObject obj in results)
             {
                 stringBuilder.AppendLine(obj.ToString());
             }
-            Resultbox.Text = stringBuilder.ToString();
+            Output_VMCreation_resultbox.Text = stringBuilder.ToString();
             runspace.Close();
         }
     }
