@@ -19,8 +19,8 @@
         <br />
         <h4> Does this VM need a DVD device for ISO installation?</h4>
         <asp:RadioButtonList id="Input_VMCD" runat="server">
-                 <asp:ListItem value="Yes">Yes</asp:ListItem>
-                 <asp:ListItem value="No">No</asp:ListItem>
+                 <asp:ListItem value="true">Yes</asp:ListItem>
+                 <asp:ListItem value="false">No</asp:ListItem>
                  </asp:RadioButtonList>
         <br />
         <h4> What Datastore should this reside on?</h4>
