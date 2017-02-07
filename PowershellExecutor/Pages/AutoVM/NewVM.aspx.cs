@@ -47,12 +47,11 @@ namespace PowershellExecutor.Pages.AutoVM
             .AddParameter("VMDatastore", Input_VMDatastore.SelectedValue)
             .AddParameter("VMDescription",Input_VMDescription.Text)
             .AddParameter("VMDiskGB", Input_VMDiskGB.Text)
-            .AddParameter("VMDiskStorageFormat", Input_VMDiskStorageFormat)
-            .AddParameter("VMGuestID", Input_VMGuestID)
-            .AddParameter("VMMemoryGB", Input_VMMemoryGB )
-            .AddParameter("VMNumCPU", Input_VMNumCPU);
+            .AddParameter("VMDiskStorageFormat", Input_VMDiskStorageFormat.SelectedValue)
+            .AddParameter("VMGuestID", Input_VMGuestID.SelectedValue)
+            .AddParameter("VMMemoryGB", Input_VMMemoryGB.Text )
+            .AddParameter("VMNumCPU", Input_VMNumCPU.Text);
             var results = Shell.Invoke();
-            Thread.Sleep(1000);
             StringBuilder stringBuilder = new StringBuilder();
             foreach (PSObject obj in results)
             {
