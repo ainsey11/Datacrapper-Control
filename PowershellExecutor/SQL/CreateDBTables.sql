@@ -22,4 +22,3 @@ Create table network_stats (
 		InterfaceOut Int NOT NULL,
 		timestamp DATETIME2 NOT NULL,
 		);
-
