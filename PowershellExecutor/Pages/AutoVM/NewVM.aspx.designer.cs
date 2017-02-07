@@ -31,6 +31,15 @@ namespace PowershellExecutor.Pages.AutoVM {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// Output_VM_Ping control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Output_VM_Ping;
+        
+        /// <summary>
         /// Input_VmName control.
         /// </summary>
         /// <remarks>

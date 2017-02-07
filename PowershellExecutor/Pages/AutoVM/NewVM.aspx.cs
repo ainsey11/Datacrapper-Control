@@ -8,6 +8,7 @@ using System.Management.Automation;
 using System.Collections.ObjectModel;
 using System.Text;
 using System.Management.Automation.Runspaces;
+using System.Net.NetworkInformation;
 
 namespace PowershellExecutor.Pages.AutoVM
 {
@@ -15,7 +16,21 @@ namespace PowershellExecutor.Pages.AutoVM
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            var VMHostIP = "172.16.1.12";
+            Ping p1 = new Ping();
+            PingReply PR = p1.Send(VMHostIP);
+            // check when the ping is not success
+            while (!PR.Status.ToString().Equals("Success"))
+            {
+                Console.WriteLine(PR.Status.ToString());
+                PR = p1.Send(VMHostIP);
+            }
+            // check after the ping is n success
+            while (PR.Status.ToString().Equals("Success"))
+            {
+                Console.WriteLine(PR.Status.ToString());
+                PR = p1.Send(VMHostIP);
+            }
         }
         protected void NewVM_ExecuteCode_Click(object sender, EventArgs e)
         {
@@ -38,7 +53,7 @@ namespace PowershellExecutor.Pages.AutoVM
             {
                 stringBuilder.AppendLine(obj.ToString());
             }
-            Output_VMCreation_resultbox.Text = stringBuilder.ToString();
+           Output_VMCreation_resultbox.Text = stringBuilder.ToString();
             runspace.Close();
         }
     }
