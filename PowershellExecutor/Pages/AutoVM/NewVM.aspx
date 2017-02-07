@@ -49,7 +49,7 @@
         <asp:Button ID="Action_CreateVM" runat="server" Text="Create new VM" Width="250" onclick="NewVM_ExecuteCode_Click" />  
         <br />
         <h3>VM Creation Status:</h3>
-        <asp:TextBox ID="Output_VMCreation_resultbox" runat="server" style="border:none"/>
+        <asp:TextBox ID="Output_VMCreation_resultbox" runat="server" style="border:none" Width="500" Height="50"/>
     </div>
     </form>
 </body>
