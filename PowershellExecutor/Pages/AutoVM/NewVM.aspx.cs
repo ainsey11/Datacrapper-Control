@@ -44,13 +44,12 @@ namespace PowershellExecutor.Pages.AutoVM
             var Shell = PowerShell.Create()
             .AddCommand(@"C:\Users\Robert\Documents\GitHub\DataCrapper-Control\PowershellExecutor\Powershell\AutoVM\NewVM.ps1")
             .AddParameter("VMName", Input_VmName.Text)
-            .AddParameter("VMCD", Input_VMCD.SelectedValue)
             .AddParameter("VMDatastore", Input_VMDatastore.SelectedValue)
             .AddParameter("VMDescription",Input_VMDescription.Text)
-            .AddParameter("VMDiskMB", Input_VMDiskMB.Text)
+            .AddParameter("VMDiskGB", Input_VMDiskGB.Text)
             .AddParameter("VMDiskStorageFormat", Input_VMDiskStorageFormat)
             .AddParameter("VMGuestID", Input_VMGuestID)
-            .AddParameter("VMMemoryMB", Input_VMMemoryMB )
+            .AddParameter("VMMemoryGB", Input_VMMemoryGB )
             .AddParameter("VMNumCPU", Input_VMNumCPU);
             var results = Shell.Invoke();
             StringBuilder stringBuilder = new StringBuilder();

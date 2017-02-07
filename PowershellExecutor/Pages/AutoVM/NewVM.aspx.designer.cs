@@ -67,15 +67,6 @@ namespace PowershellExecutor.Pages.AutoVM {
         protected global::System.Web.UI.WebControls.TextBox Input_VMDescription;
         
         /// <summary>
-        /// Input_VMCD control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList Input_VMCD;
-        
-        /// <summary>
         /// Input_VMDatastore control.
         /// </summary>
         /// <remarks>
@@ -85,13 +76,13 @@ namespace PowershellExecutor.Pages.AutoVM {
         protected global::System.Web.UI.WebControls.RadioButtonList Input_VMDatastore;
         
         /// <summary>
-        /// Input_VMDiskMB control.
+        /// Input_VMDiskGB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Input_VMDiskMB;
+        protected global::System.Web.UI.WebControls.TextBox Input_VMDiskGB;
         
         /// <summary>
         /// Input_VMDiskStorageFormat control.
@@ -112,13 +103,13 @@ namespace PowershellExecutor.Pages.AutoVM {
         protected global::System.Web.UI.WebControls.RadioButtonList Input_VMGuestID;
         
         /// <summary>
-        /// Input_VMMemoryMB control.
+        /// Input_VMMemoryGB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Input_VMMemoryMB;
+        protected global::System.Web.UI.WebControls.TextBox Input_VMMemoryGB;
         
         /// <summary>
         /// Input_VMNumCPU control.
