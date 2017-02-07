@@ -52,6 +52,7 @@ namespace PowershellExecutor.Pages.AutoVM
             .AddParameter("VMMemoryGB", Input_VMMemoryGB )
             .AddParameter("VMNumCPU", Input_VMNumCPU);
             var results = Shell.Invoke();
+            Thread.Sleep(1000);
             StringBuilder stringBuilder = new StringBuilder();
             foreach (PSObject obj in results)
             {
