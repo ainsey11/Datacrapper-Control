@@ -9,6 +9,8 @@ using System.Collections.ObjectModel;
 using System.Text;
 using System.Management.Automation.Runspaces;
 using System.Net.NetworkInformation;
+using System.Threading;
+
 
 namespace PowershellExecutor.Pages.AutoVM
 {
@@ -16,22 +18,30 @@ namespace PowershellExecutor.Pages.AutoVM
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            var VMHostIP = "172.16.1.12";
-            Ping p1 = new Ping();
-            PingReply PR = p1.Send(VMHostIP);
-            // check when the ping is not success
-            while (!PR.Status.ToString().Equals("Success"))
+        
+        }
+
+        protected void VmwarePing_ExecuteCode_Click(object sender, EventArgs e)
+        {
+            string ip = "172.16.1.12";
+            string nn = "2";
+            int n = int.Parse(nn);
+            Ping PingSender = new Ping();
+            PingOptions PingOpt = new PingOptions();
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i <= n; i++)
             {
-                Console.WriteLine(PR.Status.ToString());
-                PR = p1.Send(VMHostIP);
-            }
-            // check after the ping is n success
-            while (PR.Status.ToString().Equals("Success"))
-            {
-                Console.WriteLine(PR.Status.ToString());
-                PR = p1.Send(VMHostIP);
+                PingReply reply = PingSender.Send(ip);
+                var ttl = reply.Options.Ttl;
+                var rt = reply.RoundtripTime;
+
+                sb.Append(Environment.NewLine + reply.Address + "\t" + ttl + "\t" + rt);
+                Output_VM_Ping.Text = sb.ToString();
+
+                Thread.Sleep(1000);
             }
         }
+
         protected void NewVM_ExecuteCode_Click(object sender, EventArgs e)
         {
             Runspace runspace = RunspaceFactory.CreateRunspace();
