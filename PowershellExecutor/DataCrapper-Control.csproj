@@ -195,6 +195,7 @@
     <Content Include="Index.html" />
     <Content Include="login.aspx" />
     <Content Include="Pages\AutoVM\NewVM.aspx" />
+    <Content Include="Pages\AutoVM\RemoveVM.aspx" />
     <Content Include="Pages\PDU\PDUStats.aspx" />
     <Content Include="Pages\SNMP\OIDValueFetcher.aspx" />
     <Content Include="Powershell\PDU\PDUControl.ps1" />
@@ -1060,6 +1061,13 @@
     </Compile>
     <Compile Include="Pages\AutoVM\NewVM.aspx.designer.cs">
       <DependentUpon>NewVM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AutoVM\RemoveVM.aspx.cs">
+      <DependentUpon>RemoveVM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AutoVM\RemoveVM.aspx.designer.cs">
+      <DependentUpon>RemoveVM.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\PDU\PDUControl.aspx.cs">
       <DependentUpon>PDUControl.aspx</DependentUpon>
