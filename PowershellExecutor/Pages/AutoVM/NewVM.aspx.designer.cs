@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PowerShellExecution {
+namespace PowershellExecutor.Pages.AutoVM {
     
     
-    public partial class Default {
+    public partial class NewVM {
         
         /// <summary>
         /// Head1 control.
