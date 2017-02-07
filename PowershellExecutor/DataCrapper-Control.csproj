@@ -181,7 +181,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Pages\NetTools\" />
-    <Folder Include="Pages\Statistics\app\" />
     <Folder Include="Pages\Statistics\content\" />
     <Folder Include="Pages\Statistics\scripts\" />
   </ItemGroup>
@@ -198,6 +197,7 @@
     <Content Include="Pages\AutoVM\NewVM.aspx" />
     <Content Include="Pages\PDU\PDUStats.aspx" />
     <Content Include="Pages\SNMP\OIDValueFetcher.aspx" />
+    <Content Include="Pages\Statistics\app\app.js" />
     <Content Include="Pages\Statistics\Index.html" />
     <Content Include="Powershell\PDU\PDUControl.ps1" />
     <Content Include="Powershell\SNMP\OIDValueFetcher.ps1" />
