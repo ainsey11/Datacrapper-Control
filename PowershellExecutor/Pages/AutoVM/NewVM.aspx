@@ -51,9 +51,10 @@
         <h4> Please enter desired number of vCPU Cores</h4>
         <asp:TextBox ID="Input_VMNumCPU" runat ="server" TextMode="SingleLine" Width="10px" Height="20px" ></asp:TextBox>
         <br />
+        <br />
         <asp:Button ID="Action_CreateVM" runat="server" Text="Create new VM" Width="250" onclick="NewVM_ExecuteCode_Click" />  
         <br />
-        <h3>Status:</h3>
+        <h3>VM Creation Status:</h3>
         <asp:TextBox ID="Output_VMCreation_resultbox" runat="server" style="border:none"/>
     </div>
     </form>
