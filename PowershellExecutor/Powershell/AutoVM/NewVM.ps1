@@ -1,7 +1,6 @@
 param (
 $VmwareServer = "172.16.1.12",
 $VmName,
-$VMCD = $true,
 $VMDatastore,
 $VMDescription,
 $VMDiskMB,
@@ -24,7 +23,7 @@ if ( !(Get-Module -Name VMware.VimAutomation.Core -ErrorAction SilentlyContinue)
     Write-Host "VMware modules not loaded/unable to load"
     Exit 99
 }
-[string] $password = 1A2D5^7*kbD02v
+[string] $password = "1A2D5^7*kbD02v"
 Connect-VIServer 172.16.1.12 -User datacrapper -Password $password
 
 
