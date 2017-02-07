@@ -24,22 +24,17 @@ namespace PowershellExecutor.Pages.AutoVM
         protected void VmwarePing_ExecuteCode_Click(object sender, EventArgs e)
         {
             string ip = "172.16.1.12";
-            string nn = "2";
+            string nn = "1";
             int n = int.Parse(nn);
             Ping PingSender = new Ping();
             PingOptions PingOpt = new PingOptions();
             StringBuilder sb = new StringBuilder();
-            for (int i = 0; i <= n; i++)
-            {
-                PingReply reply = PingSender.Send(ip);
-                var ttl = reply.Options.Ttl;
-                var rt = reply.RoundtripTime;
-
-                sb.Append(Environment.NewLine + reply.Address + "\t" + ttl + "\t" + rt);
-                Output_VM_Ping.Text = sb.ToString();
-
-                Thread.Sleep(1000);
-            }
+            PingReply reply = PingSender.Send(ip);
+            var rt = reply.RoundtripTime;
+            sb.Append("IP=" + "\t" + reply.Address + "\t" + "Time=" + rt);
+            Output_VM_Ping.Text = sb.ToString();
+            Thread.Sleep(50);
+            
         }
 
         protected void NewVM_ExecuteCode_Click(object sender, EventArgs e)

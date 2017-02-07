@@ -11,7 +11,7 @@
     <h3> Please fill out the below form to provision a new VM</h3>
        <br />
         <asp:Button ID="Check_VM_Ping" runat="server" Text="Check VM Host Status" Width="200" onclick="VmwarePing_ExecuteCode_Click" />
-        <asp:TextBox ID="Output_VM_Ping" runat="server" style="border:none" Width="500" Height="50"/>
+        <asp:TextBox ID="Output_VM_Ping" runat="server" style="border:none" Width="250" Height="50"/>
        <br />
         <h4> Please Enter a name for this VM </h4>
         <asp:TextBox ID="Input_VmName" runat ="server" TextMode="SingleLine" Width="200px" Height="20px" ></asp:TextBox>
