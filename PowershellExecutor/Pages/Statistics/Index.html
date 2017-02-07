@@ -25,5 +25,16 @@
 
 </head>
 <body ng-app="angularServiceDashboard">
-</body>
+    <div class="row" ng-controller="PerformanceDataController">
+        <div class="col-lg-3 col-md-6">
+            <div class="panel panel-dashboard">
+                <div class="center">Memory Performance</div>
+                <div class="panel-body">
+                    <div class="huge">{{currentRamNumber}}</div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+ </body>
 </html>

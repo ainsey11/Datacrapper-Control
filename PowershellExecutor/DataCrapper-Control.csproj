@@ -198,6 +198,8 @@
     <Content Include="Pages\PDU\PDUStats.aspx" />
     <Content Include="Pages\SNMP\OIDValueFetcher.aspx" />
     <Content Include="Pages\Statistics\app\app.js" />
+    <Content Include="Pages\Statistics\app\controllers.js" />
+    <Content Include="Pages\Statistics\app\services.js" />
     <Content Include="Pages\Statistics\Index.html" />
     <Content Include="Powershell\PDU\PDUControl.ps1" />
     <Content Include="Powershell\SNMP\OIDValueFetcher.ps1" />
