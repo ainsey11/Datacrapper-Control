@@ -155,30 +155,6 @@
     <Content Include="Pages\AutoVM\NewVM.aspx" />
     <Content Include="Pages\PDU\PDUStats.aspx" />
     <Content Include="Pages\SNMP\OIDValueFetcher.aspx" />
-<<<<<<< HEAD
-=======
-    <Content Include="Pages\Statistics\GraphBuilder\placeholder.txt" />
-    <Content Include="Pages\Statistics\GraphPages\TestCPUUsage.aspx" />
-    <Content Include="Pages\Statistics\Index.html" />
->>>>>>> parent of 599d7ed... add this jazz
-    <Content Include="Powershell\PDU\PDUControl.ps1" />
-    <Content Include="Powershell\SNMP\OIDValueFetcher.ps1" />
-    <Content Include="Powershell\AutoVM\NewVM.ps1" />
-    <None Include="Properties\PublishProfiles\new.pubxml" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="ReferenceDLL\SharpSnmpLib.dll" />
-    <Content Include="ReferenceDLL\SharpSnmpLib.Engine.dll" />
-    <Content Include="Scripts\ai.0.22.9-build00167.js" />
-    <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-<<<<<<< HEAD
-    <Content Include="Scripts\jquery.signalR-2.2.1.js" />
-    <Content Include="Scripts\jquery.signalR-2.2.1.min.js" />
-=======
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
->>>>>>> parent of 599d7ed... add this jazz
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -255,16 +231,6 @@
     <Compile Include="Pages\SNMP\OIDValueFetcher.aspx.designer.cs">
       <DependentUpon>OIDValueFetcher.aspx</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-=======
-    <Compile Include="Pages\Statistics\GraphPages\TestCPUUsage.aspx.cs">
-      <DependentUpon>TestCPUUsage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\Statistics\GraphPages\TestCPUUsage.aspx.designer.cs">
-      <DependentUpon>TestCPUUsage.aspx</DependentUpon>
-    </Compile>
->>>>>>> parent of 599d7ed... add this jazz
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>

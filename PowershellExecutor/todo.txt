@@ -1,5 +1,4 @@
-﻿Finish SNMP Value fetcher
-Display SNMP Values on web page
+﻿Display SNMP Values on web page
 Investigate Intel Edison Integration
 Sabnzbd / Sonarr / Couchpotato stats / control panel?
 Plex Library manual scan button
