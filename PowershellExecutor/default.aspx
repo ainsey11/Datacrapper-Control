@@ -88,8 +88,26 @@
         <li class="bg_lr"> <a href="/Pages/ErrorPages/error404.html"> <i class="icon-info-sign"><span class="label label-important">2</span></i> Alerts</a> </li>
       </ul>
     </div>
-<!--End-Action boxes-->   
-          
+      <div class="widget-box">
+          <div class="widget-title"> <span class="icon"><i class="icon-ok"></i></span>
+            <h5>To Do list</h5>
+          </div>
+          <div class="widget-content">
+            <div class="todo">
+              <ul>
+                <li class="clearfix">
+                  <div class="txt"> Finish web front end off <span class="by label">Ainsey</span> <span class="date badge badge-important">This Week</span> </div>
+                </li>
+                <li class="clearfix">
+                  <div class="txt"> Create VM Guest installation scripts <span class="by label">Ainsey</span></div>
+                </li>
+               
+              </ul>
+            </div>
+          </div>
+        </div>
+<!--End-Action boxes-->  
+      
 <!--Footer-part-->
 
 <div class="row-fluid">
