@@ -9,7 +9,7 @@
 <body>
 <form id="form1" runat="server">
     <div id="main">
-                <h3>Please Select PDU </h3> 
+                 <h3>Please Select PDU </h3> 
                  <asp:RadioButtonList id="PDUNumber" runat="server">
                  <asp:ListItem value="1">PDU 1</asp:ListItem>
                  <asp:ListItem value="2">PDU 2</asp:ListItem>
