@@ -22,3 +22,11 @@ Create table network_stats (
 		InterfaceOut Int NOT NULL,
 		timestamp DATETIME2 NOT NULL,
 		);
+CREATE TABLE login (
+    UserID INT IDENTITY(1,1) NOT NULL,
+    UserName varChar(512),
+	Password varChar(512) NOT NULL,
+    Firstname varchar(50) NOT NULL,
+	Lastname varchar(50) not null,
+	PRIMARY KEY (UserID)
+);

@@ -152,8 +152,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Index.html" />
-    <Content Include="login.aspx" />
     <Content Include="Pages\AutoVM\NewVM.aspx" />
+    <Content Include="Pages\Login\login.aspx" />
     <Content Include="Pages\PDU\PDUStats.aspx" />
     <Content Include="Pages\SNMP\OIDValueFetcher.aspx" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
@@ -201,19 +201,19 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="login.aspx.cs">
-      <DependentUpon>login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="login.aspx.designer.cs">
-      <DependentUpon>login.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Pages\AutoVM\NewVM.aspx.cs">
       <DependentUpon>NewVM.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\AutoVM\NewVM.aspx.designer.cs">
       <DependentUpon>NewVM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Login\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Login\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\PDU\PDUControl.aspx.cs">
       <DependentUpon>PDUControl.aspx</DependentUpon>
