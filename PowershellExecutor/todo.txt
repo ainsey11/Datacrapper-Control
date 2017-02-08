@@ -1,9 +1,11 @@
-﻿Display SNMP Values on web page
+﻿Finish SNMP Value fetcher
+Display SNMP Values on web page
 Investigate Intel Edison Integration
 Sabnzbd / Sonarr / Couchpotato stats / control panel?
 Plex Library manual scan button
 Scehduled task web control panel?
 port scanner / dns checker panel and various network utils
+automatic vmware vm creation
 automatic vm guest configuration
 network stats 
 web based rgb light colour selector
