@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PowershellExecutor.Pages.SNMP {
+namespace PowershellExecutor.Pages.Login {
     
     
-    public partial class OIDValueFetcher {
+    public partial class datacrapperlogin {
         
         /// <summary>
         /// form1 control.

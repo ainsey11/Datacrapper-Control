@@ -13,13 +13,12 @@ using System.Xml.Linq;
 
 namespace PowershellExecutor.Pages.Login
 {
-    public partial class login : System.Web.UI.Page
+    public partial class datacrapperlogin : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+       
         }
-
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString);
