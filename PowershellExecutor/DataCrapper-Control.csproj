@@ -186,11 +186,9 @@
     <Content Include="Pages\SNMP\OIDValueFetcher.aspx" />
     <Content Include="Pages\Statistics\GraphBuilder\placeholder.txt" />
     <Content Include="Pages\Statistics\GraphPages\TestRTDCharts\Tests\TestCPUUsage.aspx" />
-    <Content Include="Pages\Statistics\Index.html" />
     <Content Include="Powershell\PDU\PDUControl.ps1" />
     <Content Include="Powershell\SNMP\OIDValueFetcher.ps1" />
     <Content Include="Powershell\AutoVM\NewVM.ps1" />
-    <Content Include="ClassDiagram1.cd" />
     <None Include="Properties\PublishProfiles\new.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="ReferenceDLL\SharpSnmpLib.dll" />
