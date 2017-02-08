@@ -144,6 +144,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Pages\Login\" />
     <Folder Include="Pages\NetTools\" />
     <Folder Include="Pages\Statistics\" />
   </ItemGroup>
@@ -153,7 +154,6 @@
     </Content>
     <Content Include="Index.html" />
     <Content Include="Pages\AutoVM\NewVM.aspx" />
-    <Content Include="Pages\Login\datacrapperlogin.aspx" />
     <Content Include="Pages\PDU\PDUStats.aspx" />
     <Content Include="Pages\SNMP\OIDValueFetcher.aspx" />
     <None Include="Scripts\jquery-1.4.4-vsdoc.js" />
@@ -213,13 +213,6 @@
     </Compile>
     <Compile Include="Pages\AutoVM\NewVM.aspx.designer.cs">
       <DependentUpon>NewVM.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Login\datacrapperlogin.aspx.cs">
-      <DependentUpon>datacrapperlogin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\Login\datacrapperlogin.aspx.designer.cs">
-      <DependentUpon>datacrapperlogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\PDU\PDUControl.aspx.cs">
       <DependentUpon>PDUControl.aspx</DependentUpon>
