@@ -154,7 +154,6 @@
     <Content Include="default.aspx" />
     <Content Include="logon.aspx" />
     <Content Include="Pages\AutoVM\NewVM.aspx" />
-    <Content Include="Pages\PDU\PDUStats.aspx" />
     <Content Include="Pages\SNMP\OIDValueFetcher.aspx" />
     <None Include="Scripts\jquery-1.4.4-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.4.js" />
@@ -237,13 +236,6 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\PDU\PDUStats.aspx.cs">
-      <DependentUpon>PDUStats.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\PDU\PDUStats.aspx.designer.cs">
-      <DependentUpon>PDUStats.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\SNMP\OIDValueFetcher.aspx.cs">
       <DependentUpon>OIDValueFetcher.aspx</DependentUpon>

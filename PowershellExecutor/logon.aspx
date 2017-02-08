@@ -21,45 +21,33 @@
   <title>Forms Authentication - Login</title>
 </head>
 <body>
-  <form id="form1" runat="server">
-    <h3>
-      Logon Page</h3>
-    <table>
-      <tr>
-        <td>
-          E-mail address:</td>
-        <td>
-          <asp:TextBox ID="UserEmail" runat="server" /></td>
-        <td>
-          <asp:RequiredFieldValidator ID="RequiredFieldValidator1" 
+      <form id="form1" runat="server">
+     
+    <h3>Datacrapper Control Panel Logon Page</h3>
+    <br />
+        Username:
+    <br />
+    <asp:TextBox ID="UserEmail" runat="server" />
+    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" 
             ControlToValidate="UserEmail"
             Display="Dynamic" 
             ErrorMessage="Cannot be empty." 
             runat="server" />
-        </td>
-      </tr>
-      <tr>
-        <td>
-          Password:</td>
-        <td>
-          <asp:TextBox ID="UserPass" TextMode="Password" 
+    <br />
+       Password:
+    <br />
+    <asp:TextBox ID="UserPass" TextMode="Password" 
              runat="server" />
-        </td>
-        <td>
-          <asp:RequiredFieldValidator ID="RequiredFieldValidator2" 
+    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" 
             ControlToValidate="UserPass"
             ErrorMessage="Cannot be empty." 
             runat="server" />
-        </td>
-      </tr>
-      <tr>
-        <td>
-          Remember me?</td>
-        <td>
-          <asp:CheckBox ID="Persist" runat="server" /></td>
-      </tr>
-    </table>
-    <asp:Button ID="Submit1" OnClick="Logon_Click" Text="Log On" 
+     <br />
+         Remember me?
+     <asp:CheckBox ID="Persist" runat="server" />
+     <br />
+     <br />
+     <asp:Button ID="Submit1" OnClick="Logon_Click" Text="Log On to the Datacrapper Control Panel" 
        runat="server" />
     <p>
       <asp:Label ID="Msg" ForeColor="red" runat="server" />

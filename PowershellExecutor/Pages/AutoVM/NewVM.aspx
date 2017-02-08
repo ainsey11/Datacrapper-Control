@@ -5,8 +5,21 @@
 <head id="Head1" runat="server">
     <title>Datacrapper Control Panel.</title>
      </head>
+    <script runat="server">
+  void Page_Load(object sender, EventArgs e)
+  {
+    Welcome.Text = "You are logged in as: " + Context.User.Identity.Name;
+  }
+
+  void Signout_Click(object sender, EventArgs e)
+  {
+    FormsAuthentication.SignOut();
+    Response.Redirect("Logon.aspx");
+  }
+</script>
 <body>
     <form id="form1" runat="server">
+         <asp:Label ID="Welcome" runat="server" />
     <div id ="main">
     <h3> Please fill out the below form to provision a new VM</h3>
        <br />

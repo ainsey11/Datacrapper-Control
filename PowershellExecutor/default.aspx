@@ -25,8 +25,6 @@
        Text="Sign Out" runat="server" /><p>
     <a title="PDU Control" href="/Pages/PDU/PDUControl.aspx">PDU Control</a>
     <br />
-    <a title="PDU Stats" href="/Pages/PDU/PDUStats.aspx">PDU Stats</a>    
-    <br />
     <a title="SNMP OID Value Fetcher" href="/Pages/SNMP/OIDValueFetcher.aspx">SNMP OID Value Fetcher</a>   
     <br />
     <a title="VM Creator" href="/Pages/AutoVM/NewVM.aspx">New VM Creation Page</a>   

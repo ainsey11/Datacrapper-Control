@@ -6,9 +6,22 @@
 <head runat="server">
     <title>Datacrapper </title>
 </head>
+     <script runat="server">
+  void Page_Load(object sender, EventArgs e)
+  {
+    Welcome.Text = "You are logged in as: " + Context.User.Identity.Name;
+  }
+
+  void Signout_Click(object sender, EventArgs e)
+  {
+    FormsAuthentication.SignOut();
+    Response.Redirect("Logon.aspx");
+  }
+</script>
 <body>
    <form id="form1" runat="server">
     <div id="main">
+                <asp:Label ID="Welcome" runat="server" />
                 <h3>Please Select SNMP Version </h3> 
                  <asp:RadioButtonList id="Input_snmp_version" runat="server">
                  <asp:ListItem value="1">1</asp:ListItem>
