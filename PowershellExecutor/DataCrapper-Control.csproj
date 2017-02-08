@@ -18,8 +18,8 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
-    <IISExpressAnonymousAuthentication />
-    <IISExpressWindowsAuthentication />
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
@@ -144,7 +144,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Pages\Login\" />
     <Folder Include="Pages\NetTools\" />
     <Folder Include="Pages\Statistics\" />
   </ItemGroup>
@@ -152,7 +151,9 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="default.aspx" />
     <Content Include="Index.html" />
+    <Content Include="logon.aspx" />
     <Content Include="Pages\AutoVM\NewVM.aspx" />
     <Content Include="Pages\PDU\PDUStats.aspx" />
     <Content Include="Pages\SNMP\OIDValueFetcher.aspx" />
@@ -207,6 +208,20 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logon.aspx.cs">
+      <DependentUpon>logon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logon.aspx.designer.cs">
+      <DependentUpon>logon.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\AutoVM\NewVM.aspx.cs">
       <DependentUpon>NewVM.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
