@@ -2,7 +2,8 @@
 <html>
 <head>
   <title>Datacrapper Control Panel</title>
-</head>
+    
+  </head>
 
 <script runat="server">
   void Page_Load(object sender, EventArgs e)
