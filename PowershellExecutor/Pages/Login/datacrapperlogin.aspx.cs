@@ -31,7 +31,7 @@ namespace PowershellExecutor.Pages.Login
             da.Fill(dt);
             if (dt.Rows.Count > 0)
             {
-                Response.Redirect("Details.aspx");
+                Response.Redirect("/index.html");
             }
             else
             {
