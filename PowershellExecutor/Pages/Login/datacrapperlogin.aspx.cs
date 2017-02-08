@@ -23,7 +23,7 @@ namespace PowershellExecutor.Pages.Login
         {
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString);
             con.Open();
-            SqlCommand cmd = new SqlCommand("select * from UserInformation where UserName =@username and Password=@password", con);
+            SqlCommand cmd = new SqlCommand("select * from login where UserName =@username and Password=@password", con);
             cmd.Parameters.AddWithValue("@username", txtUserName.Text);
             cmd.Parameters.AddWithValue("@password", txtPWD.Text);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
